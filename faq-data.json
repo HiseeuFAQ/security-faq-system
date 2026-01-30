@@ -1,0 +1,739 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-30",
+    "supportEmail": "support@securitycam.com"
+  },
+  "categories": [
+    {
+      "id": "b2b",
+      "label": {
+        "en": "For Businesses",
+        "zh": "企业客户"
+      },
+      "description": {
+        "en": "Solutions for enterprises, retailers, offices, factories, and property management",
+        "zh": "适用于企业、零售商、办公室、工厂和物业管理"
+      },
+      "subcategories": [
+        {
+          "id": "b2b-bulk-purchase",
+          "label": {
+            "en": "Bulk Purchasing & Quotation",
+            "zh": "批量采购与报价"
+          },
+          "faqs": [
+            {
+              "id": "b2b-bulk-001",
+              "question": {
+                "en": "How do I get a bulk purchase quotation for my business?",
+                "zh": "我如何获得企业批量采购报价？"
+              },
+              "answer": {
+                "en": "To receive a bulk quotation, please contact our B2B sales team with the following information: (1) Number of cameras needed, (2) Specific camera models or specifications, (3) Installation timeline, (4) Your business type and location. You can reach us via email at sales@securitycam.com or call our hotline. We typically provide quotations within 24 hours.",
+                "zh": "如需获取批量报价，请联系我们的B2B销售团队并提供以下信息：(1) 所需摄像头数量，(2) 具体摄像头型号或规格，(3) 安装时间表，(4) 您的业务类型和地点。您可以通过电子邮件 sales@securitycam.com 或拨打我们的热线与我们联系。我们通常在24小时内提供报价。"
+              }
+            },
+            {
+              "id": "b2b-bulk-002",
+              "question": {
+                "en": "What discounts are available for large orders?",
+                "zh": "大订单有哪些折扣？"
+              },
+              "answer": {
+                "en": "Our discount structure is tiered based on order quantity: 10-50 units receive 5% discount, 51-100 units receive 10% discount, 101-500 units receive 15% discount, and orders exceeding 500 units receive 20% discount plus complimentary installation consultation. Additional discounts may apply for long-term contracts or multiple product categories.",
+                "zh": "我们的折扣结构根据订单数量分层：10-50台享受5%折扣，51-100台享受10%折扣，101-500台享受15%折扣，超过500台享受20%折扣并免费提供安装咨询。长期合同或多个产品类别可能获得额外折扣。"
+              }
+            },
+            {
+              "id": "b2b-bulk-003",
+              "question": {
+                "en": "Do you offer customized solutions for specific business needs?",
+                "zh": "您是否为特定业务需求提供定制解决方案？"
+              },
+              "answer": {
+                "en": "Yes, we provide fully customized solutions tailored to your business requirements. Our technical team can design systems incorporating facial recognition, advanced analytics, custom storage capacity, and integration with your existing security infrastructure. Contact our solutions architect team at solutions@securitycam.com to discuss your specific needs.",
+                "zh": "是的，我们提供根据您的业务需求量身定制的解决方案。我们的技术团队可以设计包含人脸识别、高级分析、自定义存储容量以及与您现有安全基础设施集成的系统。请联系我们的解决方案架构师团队 solutions@securitycam.com 讨论您的具体需求。"
+              }
+            },
+            {
+              "id": "b2b-bulk-004",
+              "question": {
+                "en": "What is the lead time for bulk orders?",
+                "zh": "批量订单的交货期是多长？"
+              },
+              "answer": {
+                "en": "Standard lead time for bulk orders is 5-10 business days depending on inventory availability and order complexity. Rush orders can be accommodated with a 20% expedited fee for delivery within 2-3 business days. For orders exceeding 500 units, lead time may extend to 15-20 business days due to manufacturing and quality assurance requirements.",
+                "zh": "批量订单的标准交货期为5-10个工作日，具体取决于库存可用性和订单复杂性。可以以20%加急费用加快交货，在2-3个工作日内交付。对于超过500台的订单，由于制造和质量保证要求，交货期可能延长至15-20个工作日。"
+              }
+            },
+            {
+              "id": "b2b-bulk-005",
+              "question": {
+                "en": "Can I mix different camera models in a single bulk order?",
+                "zh": "我可以在单个批量订单中混合不同的摄像头型号吗？"
+              },
+              "answer": {
+                "en": "Absolutely. We support mixed-model orders to accommodate diverse surveillance needs across different areas of your facility. You can combine any combination of our camera models in a single order. However, minimum order quantities may apply per model. Our sales team will work with you to optimize your order composition and ensure compatibility across all devices.",
+                "zh": "当然可以。我们支持混合型号订单，以满足您设施不同区域的多样化监控需求。您可以在单个订单中组合我们的任何摄像头型号。但是，每个型号可能适用最少订购数量。我们的销售团队将与您合作优化订单组成，并确保所有设备的兼容性。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2b-deployment",
+          "label": {
+            "en": "Project Deployment & Installation",
+            "zh": "项目部署与安装"
+          },
+          "faqs": [
+            {
+              "id": "b2b-deploy-001",
+              "question": {
+                "en": "Do you provide professional installation services?",
+                "zh": "您提供专业安装服务吗？"
+              },
+              "answer": {
+                "en": "Yes, we offer comprehensive professional installation services for all bulk orders. Our certified technicians will assess your site, design the optimal camera placement, handle all wiring and network configuration, and conduct system testing. Installation is typically included free for orders over 50 units. For smaller orders, installation services are available at $50-100 per camera depending on complexity.",
+                "zh": "是的，我们为所有批量订单提供全面的专业安装服务。我们的认证技术人员将评估您的现场，设计最优的摄像头放置方案，处理所有布线和网络配置，并进行系统测试。超过50台的订单通常免费提供安装。对于较小的订单，安装服务可根据复杂性按每台摄像头50-100美元收费。"
+              }
+            },
+            {
+              "id": "b2b-deploy-002",
+              "question": {
+                "en": "How long does a typical installation take?",
+                "zh": "典型的安装需要多长时间？"
+              },
+              "answer": {
+                "en": "Installation duration depends on the number of cameras and site complexity. As a general guideline: 5-10 cameras take 1-2 days, 11-30 cameras take 2-4 days, 31-100 cameras take 1-2 weeks. We schedule installations at your convenience and can work during off-hours to minimize business disruption. Complex custom integrations may require additional time.",
+                "zh": "安装时间取决于摄像头数量和现场复杂性。一般指南：5-10台摄像头需要1-2天，11-30台摄像头需要2-4天，31-100台摄像头需要1-2周。我们按您的方便时间安排安装，可以在非工作时间进行以最大限度地减少业务中断。复杂的定制集成可能需要额外时间。"
+              }
+            },
+            {
+              "id": "b2b-deploy-003",
+              "question": {
+                "en": "What is the warranty coverage for installed systems?",
+                "zh": "已安装系统的保修范围是什么？"
+              },
+              "answer": {
+                "en": "All installed systems come with a standard 2-year hardware warranty covering defects in materials and workmanship. The warranty includes free replacement of faulty cameras and components. We also offer extended warranty options up to 5 years, which include priority support and expedited replacement services. Installation labor is covered for the first year.",
+                "zh": "所有已安装的系统均附带标准的2年硬件保修，涵盖材料和工艺缺陷。保修包括故障摄像头和组件的免费更换。我们还提供长达5年的延长保修选项，包括优先支持和加急更换服务。安装劳动力在第一年内包含在内。"
+              }
+            },
+            {
+              "id": "b2b-deploy-004",
+              "question": {
+                "en": "Can you integrate with our existing security system?",
+                "zh": "您能否与我们现有的安全系统集成？"
+              },
+              "answer": {
+                "en": "Yes, we specialize in seamless integration with existing security infrastructure. Our systems are compatible with major CCTV platforms, access control systems, and alarm systems. Our technical team will conduct a compatibility assessment and develop an integration plan. Integration services typically take 3-5 business days depending on system complexity.",
+                "zh": "是的，我们专门从事与现有安全基础设施的无缝集成。我们的系统与主要的CCTV平台、门禁系统和报警系统兼容。我们的技术团队将进行兼容性评估并制定集成计划。集成服务通常需要3-5个工作日，具体取决于系统复杂性。"
+              }
+            },
+            {
+              "id": "b2b-deploy-005",
+              "question": {
+                "en": "What training do you provide for system operation?",
+                "zh": "您为系统操作提供什么培训？"
+              },
+              "answer": {
+                "en": "We provide comprehensive on-site training for all staff who will operate the system. Training covers camera operation, video playback and export, alert configuration, user management, and basic troubleshooting. Each training session lasts 2-4 hours depending on staff size and system complexity. We also provide detailed user manuals and video tutorials accessible online 24/7.",
+                "zh": "我们为所有将操作系统的员工提供全面的现场培训。培训涵盖摄像头操作、视频回放和导出、警报配置、用户管理和基本故障排除。每个培训课程根据员工人数和系统复杂性持续2-4小时。我们还提供详细的用户手册和可在线24/7访问的视频教程。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2b-network",
+          "label": {
+            "en": "Device Networking & Configuration",
+            "zh": "设备组网与配置"
+          },
+          "faqs": [
+            {
+              "id": "b2b-net-001",
+              "question": {
+                "en": "What are the network requirements for the camera system?",
+                "zh": "摄像头系统的网络要求是什么？"
+              },
+              "answer": {
+                "en": "Minimum requirements: 1 Mbps upload speed per camera for standard definition, 3-5 Mbps per camera for HD, 8-10 Mbps per camera for 4K. We recommend redundant network connections for critical installations. For large deployments, dedicated network infrastructure with managed switches and PoE injectors is essential. Our technical team can conduct a network audit to ensure adequate bandwidth and stability.",
+                "zh": "最低要求：标清每台摄像头1 Mbps上传速度，高清每台摄像头3-5 Mbps，4K每台摄像头8-10 Mbps。我们建议关键安装采用冗余网络连接。对于大型部署，专用网络基础设施（包括托管交换机和PoE注入器）至关重要。我们的技术团队可以进行网络审计以确保充足的带宽和稳定性。"
+              }
+            },
+            {
+              "id": "b2b-net-002",
+              "question": {
+                "en": "How do I set up multiple cameras on the same network?",
+                "zh": "我如何在同一网络上设置多台摄像头？"
+              },
+              "answer": {
+                "en": "Our system supports centralized management for unlimited cameras. Setup process: (1) Connect all cameras to your network via Ethernet or WiFi, (2) Access the management console at your DVR/NVR IP address, (3) Add cameras by scanning QR codes or entering IP addresses, (4) Configure recording schedules and alert rules. For 50+ cameras, we recommend using our cloud management platform for simplified administration and remote access.",
+                "zh": "我们的系统支持无限数量摄像头的集中管理。设置过程：(1) 通过以太网或WiFi将所有摄像头连接到您的网络，(2) 访问您的DVR/NVR IP地址处的管理控制台，(3) 通过扫描二维码或输入IP地址添加摄像头，(4) 配置录制计划和警报规则。对于50台以上的摄像头，我们建议使用我们的云管理平台以简化管理和远程访问。"
+              }
+            },
+            {
+              "id": "b2b-net-003",
+              "question": {
+                "en": "Can cameras be accessed remotely from multiple locations?",
+                "zh": "摄像头能否从多个位置远程访问？"
+              },
+              "answer": {
+                "en": "Yes, our system supports secure remote access from multiple locations simultaneously. You can view live feeds and recordings from any authorized device with internet access. We use military-grade encryption (AES-256) to protect all data transmission. Multi-user access control allows you to set different permission levels for different staff members. Remote access is available through our mobile app, web portal, or desktop software.",
+                "zh": "是的，我们的系统支持从多个位置同时进行安全远程访问。您可以从任何具有互联网访问权限的授权设备查看实时馈送和录制。我们使用军事级加密(AES-256)保护所有数据传输。多用户访问控制允许您为不同的员工设置不同的权限级别。远程访问可通过我们的移动应用、网络门户或桌面软件获得。"
+              }
+            },
+            {
+              "id": "b2b-net-004",
+              "question": {
+                "en": "What should I do if cameras keep going offline?",
+                "zh": "如果摄像头不断离线怎么办？"
+              },
+              "answer": {
+                "en": "Common causes and solutions: (1) Check network connectivity - ensure cameras have stable WiFi or Ethernet connection, (2) Verify power supply - use PoE or dedicated power adapters, (3) Update firmware - ensure all cameras run the latest firmware version, (4) Check firewall settings - whitelist camera IP addresses, (5) Reduce network congestion - limit bandwidth usage by other devices. If issues persist, contact our support team for remote diagnostics.",
+                "zh": "常见原因和解决方案：(1) 检查网络连接 - 确保摄像头有稳定的WiFi或以太网连接，(2) 验证电源 - 使用PoE或专用电源适配器，(3) 更新固件 - 确保所有摄像头运行最新固件版本，(4) 检查防火墙设置 - 将摄像头IP地址加入白名单，(5) 减少网络拥塞 - 限制其他设备的带宽使用。如果问题仍然存在，请联系我们的支持团队进行远程诊断。"
+              }
+            },
+            {
+              "id": "b2b-net-005",
+              "question": {
+                "en": "How do I backup and restore system configuration?",
+                "zh": "我如何备份和恢复系统配置？"
+              },
+              "answer": {
+                "en": "Backup process: (1) Access the management console, (2) Navigate to Settings > Backup, (3) Select 'Export Configuration' to save all settings, camera configurations, and user accounts, (4) Save the backup file to a secure location. Restore process: (1) Access Settings > Backup, (2) Select 'Import Configuration', (3) Choose your backup file, (4) System will restart and apply all previous settings. We recommend monthly backups to prevent data loss.",
+                "zh": "备份过程：(1) 访问管理控制台，(2) 导航到设置 > 备份，(3) 选择'导出配置'以保存所有设置、摄像头配置和用户账户，(4) 将备份文件保存到安全位置。恢复过程：(1) 访问设置 > 备份，(2) 选择'导入配置'，(3) 选择您的备份文件，(4) 系统将重新启动并应用所有以前的设置。我们建议每月备份以防止数据丢失。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2b-maintenance",
+          "label": {
+            "en": "After-Sales Support & Maintenance",
+            "zh": "售后支持与维保"
+          },
+          "faqs": [
+            {
+              "id": "b2b-maint-001",
+              "question": {
+                "en": "What maintenance is required for the camera system?",
+                "zh": "摄像头系统需要什么维护？"
+              },
+              "answer": {
+                "en": "Regular maintenance ensures optimal performance: (1) Monthly - clean camera lenses with soft cloth to remove dust and debris, (2) Quarterly - check all cable connections and power supplies for corrosion or damage, (3) Semi-annually - update firmware to latest version, (4) Annually - perform full system diagnostics and replace any worn components. We offer preventive maintenance packages starting at $200/year for up to 10 cameras.",
+                "zh": "定期维护可确保最佳性能：(1) 每月 - 用软布清洁摄像头镜头以去除灰尘和碎屑，(2) 每季度 - 检查所有电缆连接和电源是否有腐蚀或损坏，(3) 每半年 - 将固件更新到最新版本，(4) 每年 - 执行完整系统诊断并更换任何磨损的组件。我们提供预防性维护套餐，起价为每年200美元（最多10台摄像头）。"
+              }
+            },
+            {
+              "id": "b2b-maint-002",
+              "question": {
+                "en": "What is your response time for technical support?",
+                "zh": "您的技术支持响应时间是多少？"
+              },
+              "answer": {
+                "en": "Our support response times vary by service level: (1) Standard Support - 24-48 hours response, (2) Priority Support - 4-8 hours response, (3) Premium Support - 1-2 hours response with 24/7 availability. For critical issues affecting multiple cameras or business operations, we offer emergency support with 30-minute response time. Contact support@securitycam.com or call our hotline for immediate assistance.",
+                "zh": "我们的支持响应时间因服务级别而异：(1) 标准支持 - 24-48小时响应，(2) 优先支持 - 4-8小时响应，(3) 高级支持 - 1-2小时响应，24/7可用。对于影响多台摄像头或业务运营的关键问题，我们提供30分钟响应时间的紧急支持。请联系 support@securitycam.com 或拨打我们的热线以获得即时协助。"
+              }
+            },
+            {
+              "id": "b2b-maint-003",
+              "question": {
+                "en": "Do you offer on-site maintenance contracts?",
+                "zh": "您是否提供现场维护合同？"
+              },
+              "answer": {
+                "en": "Yes, we offer flexible on-site maintenance contracts tailored to your needs. Options include: (1) Quarterly visits - $150/visit for up to 20 cameras, (2) Monthly visits - $300/month for up to 30 cameras, (3) Weekly visits - $600/month for up to 50 cameras. Each visit includes system inspection, firmware updates, lens cleaning, and performance optimization. Contracts include parts replacement at cost.",
+                "zh": "是的，我们提供根据您的需求量身定制的灵活现场维护合同。选项包括：(1) 季度访问 - 最多20台摄像头每次150美元，(2) 每月访问 - 最多30台摄像头每月300美元，(3) 每周访问 - 最多50台摄像头每月600美元。每次访问包括系统检查、固件更新、镜头清洁和性能优化。合同包括按成本更换零件。"
+              }
+            },
+            {
+              "id": "b2b-maint-004",
+              "question": {
+                "en": "How do I report a problem or request support?",
+                "zh": "我如何报告问题或请求支持？"
+              },
+              "answer": {
+                "en": "Multiple support channels are available: (1) Email - support@securitycam.com with detailed description and screenshots, (2) Phone - Call our hotline +1-800-CAMERA-1 (Mon-Fri 8AM-6PM EST), (3) Online portal - Submit tickets at support.securitycam.com, (4) Mobile app - Use in-app support feature for quick assistance. Please provide your system serial number and detailed problem description for faster resolution.",
+                "zh": "提供多个支持渠道：(1) 电子邮件 - support@securitycam.com，附带详细描述和屏幕截图，(2) 电话 - 拨打我们的热线 +1-800-CAMERA-1（周一至周五上午8点至下午6点EST），(3) 在线门户 - 在 support.securitycam.com 提交工单，(4) 移动应用 - 使用应用内支持功能获得快速协助。请提供您的系统序列号和详细的问题描述以加快解决。"
+              }
+            },
+            {
+              "id": "b2b-maint-005",
+              "question": {
+                "en": "What happens after the warranty period expires?",
+                "zh": "保修期到期后会发生什么？"
+              },
+              "answer": {
+                "en": "After the standard 2-year warranty expires, you have several options: (1) Extend warranty - Renew for 1-3 additional years at 30% of original purchase price, (2) Service plan - Enroll in our annual maintenance plan for $150-300 depending on system size, (3) Pay-per-incident - Continue receiving support at $100-200 per service call. Extended warranty and service plans provide priority support and discounted parts.",
+                "zh": "标准2年保修期到期后，您有几个选择：(1) 延长保修 - 按原购买价格的30%续期1-3年，(2) 服务计划 - 根据系统大小注册我们的年度维护计划，费用为150-300美元，(3) 按次付费 - 继续以每次服务电话100-200美元的价格获得支持。延长保修和服务计划提供优先支持和折扣零件。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2c",
+      "label": {
+        "en": "For Individuals",
+        "zh": "个人客户"
+      },
+      "description": {
+        "en": "Solutions for home users and small business owners",
+        "zh": "适用于家庭用户和小企业主"
+      },
+      "subcategories": [
+        {
+          "id": "b2c-purchase",
+          "label": {
+            "en": "Device Selection & Purchase",
+            "zh": "设备选购"
+          },
+          "faqs": [
+            {
+              "id": "b2c-purch-001",
+              "question": {
+                "en": "What camera models are available for home use?",
+                "zh": "家庭使用有哪些摄像头型号？"
+              },
+              "answer": {
+                "en": "We offer several models for home users: (1) Basic 1080p - $49.99, suitable for entry-level monitoring, (2) HD 2K - $79.99, recommended for most homes, (3) 4K Ultra - $129.99, ideal for large areas or detailed monitoring, (4) Outdoor Weatherproof - $99.99, designed for exterior use. All models include night vision, motion detection, and cloud storage. Compare specifications at our website or contact our sales team for personalized recommendations.",
+                "zh": "我们为家庭用户提供多个型号：(1) 基础1080p - $49.99，适合入门级监控，(2) 高清2K - $79.99，推荐用于大多数家庭，(3) 4K超清 - $129.99，适合大面积或详细监控，(4) 户外防水 - $99.99，设计用于室外使用。所有型号都包括夜视、运动检测和云存储。在我们的网站上比较规格或联系我们的销售团队获得个性化建议。"
+              }
+            },
+            {
+              "id": "b2c-purch-002",
+              "question": {
+                "en": "How many cameras do I need for my home?",
+                "zh": "我的家需要多少台摄像头？"
+              },
+              "answer": {
+                "en": "Camera count depends on your home size and coverage needs: (1) Small apartment (under 800 sq ft) - 1-2 cameras at entry points, (2) Medium home (800-2000 sq ft) - 2-3 cameras covering main areas, (3) Large home (2000+ sq ft) - 3-5 cameras for comprehensive coverage. Recommended placement: front door, back door, living room, and garage. For detailed assessment, use our coverage calculator at www.securitycam.com/calculator or contact our team.",
+                "zh": "摄像头数量取决于您的家庭大小和覆盖需求：(1) 小公寓（不足800平方英尺）- 1-2台摄像头在入口处，(2) 中等家庭（800-2000平方英尺）- 2-3台摄像头覆盖主要区域，(3) 大型家庭（2000平方英尺以上）- 3-5台摄像头以获得全面覆盖。推荐放置位置：前门、后门、客厅和车库。如需详细评估，请使用我们的覆盖计算器 www.securitycam.com/calculator 或联系我们的团队。"
+              }
+            },
+            {
+              "id": "b2c-purch-003",
+              "question": {
+                "en": "What's the difference between wired and wireless cameras?",
+                "zh": "有线和无线摄像头有什么区别？"
+              },
+              "answer": {
+                "en": "Wired cameras offer: (1) Stable connection - no WiFi interference, (2) Continuous power - no battery concerns, (3) Better video quality - higher bandwidth, (4) Lower cost. Wireless cameras offer: (1) Easy installation - no drilling required, (2) Flexibility - can be moved easily, (3) Cleaner appearance - no visible cables, (4) Portability. For permanent home installation, we recommend wired cameras. For renters or temporary setups, wireless cameras are ideal.",
+                "zh": "有线摄像头提供：(1) 稳定连接 - 无WiFi干扰，(2) 持续电源 - 无电池问题，(3) 更好的视频质量 - 更高带宽，(4) 更低成本。无线摄像头提供：(1) 轻松安装 - 无需钻孔，(2) 灵活性 - 可轻松移动，(3) 清洁外观 - 无可见电缆，(4) 便携性。对于永久家庭安装，我们建议使用有线摄像头。对于租户或临时设置，无线摄像头是理想的。"
+              }
+            },
+            {
+              "id": "b2c-purch-004",
+              "question": {
+                "en": "Do I need a subscription for cloud storage?",
+                "zh": "我需要订阅云存储吗？"
+              },
+              "answer": {
+                "en": "All cameras come with 7 days of free cloud storage. For extended storage, we offer subscription plans: (1) Basic - 30 days storage for $4.99/month, (2) Standard - 90 days storage for $9.99/month, (3) Premium - 365 days storage for $19.99/month. Alternatively, you can use local storage with an SD card (up to 512GB) at no additional cost. Most users find local storage sufficient for their needs.",
+                "zh": "所有摄像头都配备7天的免费云存储。如需扩展存储，我们提供订阅计划：(1) 基础 - 30天存储$4.99/月，(2) 标准 - 90天存储$9.99/月，(3) 高级 - 365天存储$19.99/月。或者，您可以使用SD卡（最大512GB）的本地存储，无需额外费用。大多数用户发现本地存储足以满足他们的需求。"
+              }
+            },
+            {
+              "id": "b2c-purch-005",
+              "question": {
+                "en": "What payment methods do you accept?",
+                "zh": "您接受哪些付款方式？"
+              },
+              "answer": {
+                "en": "We accept multiple payment methods: (1) Credit/Debit cards - Visa, Mastercard, American Express, (2) Digital wallets - PayPal, Apple Pay, Google Pay, (3) Bank transfer - Direct deposit available, (4) Financing - 0% APR financing for 12 months on orders over $200. All transactions are secure and encrypted. You can also purchase through our retail partners or authorized resellers.",
+                "zh": "我们接受多种付款方式：(1) 信用卡/借记卡 - Visa、Mastercard、American Express，(2) 数字钱包 - PayPal、Apple Pay、Google Pay，(3) 银行转账 - 提供直接存款，(4) 融资 - 200美元以上订单可获得12个月0% APR融资。所有交易都是安全加密的。您也可以通过我们的零售合作伙伴或授权经销商购买。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2c-installation",
+          "label": {
+            "en": "Home Installation & Setup",
+            "zh": "家庭安装与设置"
+          },
+          "faqs": [
+            {
+              "id": "b2c-inst-001",
+              "question": {
+                "en": "Can I install the camera myself?",
+                "zh": "我可以自己安装摄像头吗？"
+              },
+              "answer": {
+                "en": "Yes, most customers successfully install cameras themselves. Installation typically takes 30-60 minutes per camera. Step-by-step process: (1) Choose optimal location with clear view and good lighting, (2) Mount camera using included bracket and hardware, (3) Connect power cable (for wired models) or insert batteries (for wireless), (4) Connect to WiFi using the mobile app, (5) Configure settings and test recording. Detailed installation guides and video tutorials are available in our app and website.",
+                "zh": "是的，大多数客户都能成功自己安装摄像头。安装通常每台摄像头需要30-60分钟。逐步过程：(1) 选择视野清晰、光线良好的最优位置，(2) 使用包含的支架和硬件安装摄像头，(3) 连接电源线（有线型号）或插入电池（无线型号），(4) 使用移动应用连接到WiFi，(5) 配置设置并测试录制。详细的安装指南和视频教程可在我们的应用和网站上获得。"
+              }
+            },
+            {
+              "id": "b2c-inst-002",
+              "question": {
+                "en": "What tools do I need for installation?",
+                "zh": "安装需要什么工具？"
+              },
+              "answer": {
+                "en": "Basic tools required: (1) Drill and drill bits - for mounting holes, (2) Screwdriver set - Phillips and flathead, (3) Level - to ensure camera is straight, (4) Measuring tape - for optimal placement, (5) Stud finder - optional, for secure wall mounting. All mounting hardware is included in the package. For outdoor installations, you may also need a ladder and weatherproof sealant. If you're uncomfortable with DIY installation, we offer professional installation services for $50-100 per camera.",
+                "zh": "所需的基本工具：(1) 钻头和钻头 - 用于安装孔，(2) 螺丝刀套装 - 十字和一字，(3) 水平仪 - 确保摄像头笔直，(4) 卷尺 - 用于最优放置，(5) 探针 - 可选，用于安全的墙壁安装。所有安装硬件都包含在包装中。对于室外安装，您可能还需要梯子和防水密封剂。如果您对DIY安装不放心，我们提供每台摄像头50-100美元的专业安装服务。"
+              }
+            },
+            {
+              "id": "b2c-inst-003",
+              "question": {
+                "en": "How do I connect the camera to my WiFi?",
+                "zh": "我如何将摄像头连接到我的WiFi？"
+              },
+              "answer": {
+                "en": "WiFi connection process: (1) Download our mobile app from App Store or Google Play, (2) Create an account and log in, (3) Tap 'Add Device' and select camera model, (4) Point phone at QR code on camera or back of box, (5) App will automatically detect camera and prompt for WiFi selection, (6) Enter your WiFi password, (7) Wait for camera to connect (usually 30-60 seconds), (8) Camera will appear in your app dashboard. For 2.4GHz networks only - 5GHz is not supported on some older models.",
+                "zh": "WiFi连接过程：(1) 从App Store或Google Play下载我们的移动应用，(2) 创建账户并登录，(3) 点击'添加设备'并选择摄像头型号，(4) 用手机指向摄像头上的二维码或盒子背面，(5) 应用将自动检测摄像头并提示选择WiFi，(6) 输入您的WiFi密码，(7) 等待摄像头连接（通常30-60秒），(8) 摄像头将出现在您的应用仪表板中。仅限2.4GHz网络 - 某些较旧型号不支持5GHz。"
+              }
+            },
+            {
+              "id": "b2c-inst-004",
+              "question": {
+                "en": "What is the optimal camera placement?",
+                "zh": "最优的摄像头放置位置是什么？"
+              },
+              "answer": {
+                "en": "Optimal placement guidelines: (1) Entry points - Mount at 5-7 feet height facing the door to capture faces clearly, (2) Living areas - Position to cover main activity zones without pointing at windows (causes glare), (3) Outdoor - Mount 8-10 feet high under eaves to protect from rain, (4) Avoid backlighting - Don't point directly at bright windows or lights, (5) Test coverage - Use mobile app to preview field of view before finalizing installation. Most homes benefit from cameras at front door, back door, and main living area.",
+                "zh": "最优放置指南：(1) 入口处 - 在5-7英尺高处安装，面向门以清晰捕捉面部，(2) 生活区 - 定位以覆盖主要活动区域，不指向窗户（会导致眩光），(3) 室外 - 在檐下8-10英尺高处安装以防雨，(4) 避免逆光 - 不要直接指向明亮的窗户或灯光，(5) 测试覆盖范围 - 使用移动应用在最终安装前预览视场。大多数家庭受益于在前门、后门和主要生活区域安装摄像头。"
+              }
+            },
+            {
+              "id": "b2c-inst-005",
+              "question": {
+                "en": "Do I need a hub or recorder for the system?",
+                "zh": "系统需要集线器或录像机吗？"
+              },
+              "answer": {
+                "en": "No hub or recorder is required for home use. Our cameras connect directly to your home WiFi and store footage in the cloud or on an SD card. However, for enhanced features, we offer optional equipment: (1) Local Hub - $99.99, enables local storage and faster playback, (2) Backup Battery - $49.99, keeps cameras running during power outages, (3) PoE Switch - $79.99, for wired installations. Most home users find cloud storage and mobile app sufficient.",
+                "zh": "家庭使用不需要集线器或录像机。我们的摄像头直接连接到您的家庭WiFi，并将视频存储在云中或SD卡上。但是，为了增强功能，我们提供可选设备：(1) 本地集线器 - $99.99，启用本地存储和更快的回放，(2) 备用电池 - $49.99，在停电期间保持摄像头运行，(3) PoE交换机 - $79.99，用于有线安装。大多数家庭用户发现云存储和移动应用足够。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2c-mobile-app",
+          "label": {
+            "en": "Mobile App & Remote Access",
+            "zh": "手机应用与远程访问"
+          },
+          "faqs": [
+            {
+              "id": "b2c-app-001",
+              "question": {
+                "en": "How do I view my cameras on my phone?",
+                "zh": "我如何在手机上查看我的摄像头？"
+              },
+              "answer": {
+                "en": "Viewing cameras on your phone: (1) Download our app from App Store (iOS) or Google Play (Android), (2) Log in with your account, (3) All connected cameras will appear on the dashboard, (4) Tap any camera to view live feed, (5) Use controls to pan/tilt (if supported), adjust zoom, or switch to night vision. The app works over WiFi or cellular data. For best performance, use WiFi when available. Live view typically has 1-3 second latency.",
+                "zh": "在手机上查看摄像头：(1) 从App Store (iOS) 或 Google Play (Android) 下载我们的应用，(2) 使用您的账户登录，(3) 所有连接的摄像头将出现在仪表板上，(4) 点击任何摄像头查看实时馈送，(5) 使用控件进行平移/倾斜（如支持）、调整缩放或切换到夜视。该应用可在WiFi或蜂窝数据上运行。为获得最佳性能，请在可用时使用WiFi。实时视图通常有1-3秒的延迟。"
+              }
+            },
+            {
+              "id": "b2c-app-002",
+              "question": {
+                "en": "Can I view multiple cameras at once?",
+                "zh": "我可以同时查看多台摄像头吗？"
+              },
+              "answer": {
+                "en": "Yes, our app supports multi-camera viewing: (1) Grid view - Display 2, 4, or 9 camera feeds simultaneously, (2) Picture-in-picture - Main camera with smaller preview of others, (3) Cycling view - Automatically rotate through cameras every 5-30 seconds. To enable multi-view: Open app dashboard, tap the grid icon, select your preferred layout. This feature works on WiFi and cellular connections. Note: Viewing many cameras simultaneously may increase data usage and reduce video quality.",
+                "zh": "是的，我们的应用支持多摄像头查看：(1) 网格视图 - 同时显示2、4或9个摄像头馈送，(2) 画中画 - 主摄像头与其他摄像头的较小预览，(3) 循环视图 - 每5-30秒自动轮换摄像头。启用多视图：打开应用仪表板，点击网格图标，选择您喜欢的布局。此功能适用于WiFi和蜂窝连接。注意：同时查看许多摄像头可能会增加数据使用量并降低视频质量。"
+              }
+            },
+            {
+              "id": "b2c-app-003",
+              "question": {
+                "en": "What should I do if the app keeps disconnecting?",
+                "zh": "如果应用不断断开连接怎么办？"
+              },
+              "answer": {
+                "en": "Troubleshooting app disconnections: (1) Check WiFi connection - Ensure your phone has stable WiFi or cellular signal, (2) Restart app - Close and reopen the app completely, (3) Restart camera - Power off camera for 30 seconds then power on, (4) Update app - Install latest version from App Store or Google Play, (5) Check firewall - Ensure your router isn't blocking camera connections, (6) Reduce distance - Move closer to WiFi router if using wireless. If issues persist, clear app cache: Settings > Apps > [App Name] > Storage > Clear Cache.",
+                "zh": "应用断开连接故障排除：(1) 检查WiFi连接 - 确保您的手机有稳定的WiFi或蜂窝信号，(2) 重启应用 - 完全关闭并重新打开应用，(3) 重启摄像头 - 关闭摄像头30秒然后打开，(4) 更新应用 - 从App Store或Google Play安装最新版本，(5) 检查防火墙 - 确保您的路由器未阻止摄像头连接，(6) 减少距离 - 如果使用无线，靠近WiFi路由器。如果问题仍然存在，清除应用缓存：设置 > 应用 > [应用名称] > 存储 > 清除缓存。"
+              }
+            },
+            {
+              "id": "b2c-app-004",
+              "question": {
+                "en": "How do I share camera access with family members?",
+                "zh": "我如何与家庭成员共享摄像头访问权限？"
+              },
+              "answer": {
+                "en": "Sharing camera access: (1) Open app and go to Settings > Sharing, (2) Tap 'Invite Family Member', (3) Enter their email address, (4) Select which cameras they can access, (5) Choose permission level (View only, View + Control, or Full access), (6) Send invitation. Family members will receive an email and can accept to view cameras on their own device. You can revoke access anytime from the Sharing menu. Up to 10 family members can be added per account.",
+                "zh": "共享摄像头访问权限：(1) 打开应用并转到设置 > 共享，(2) 点击'邀请家庭成员'，(3) 输入他们的电子邮件地址，(4) 选择他们可以访问的摄像头，(5) 选择权限级别（仅查看、查看+控制或完全访问），(6) 发送邀请。家庭成员将收到电子邮件，可以接受在自己的设备上查看摄像头。您可以随时从共享菜单撤销访问权限。每个账户最多可添加10个家庭成员。"
+              }
+            },
+            {
+              "id": "b2c-app-005",
+              "question": {
+                "en": "Is my camera data secure and private?",
+                "zh": "我的摄像头数据是否安全且隐私？"
+              },
+              "answer": {
+                "en": "Security and privacy are our top priorities: (1) Encryption - All data transmitted using AES-256 military-grade encryption, (2) Secure servers - Cloud storage on ISO 27001 certified data centers, (3) No third-party access - Your footage is never shared with advertisers or third parties, (4) Privacy controls - You control who can access your cameras, (5) Local storage option - Store footage locally on SD card instead of cloud. We comply with GDPR, CCPA, and other privacy regulations. Detailed privacy policy available at www.securitycam.com/privacy.",
+                "zh": "安全和隐私是我们的首要任务：(1) 加密 - 所有数据使用AES-256军事级加密传输，(2) 安全服务器 - 云存储在ISO 27001认证的数据中心，(3) 无第三方访问 - 您的视频从不与广告商或第三方共享，(4) 隐私控制 - 您控制谁可以访问您的摄像头，(5) 本地存储选项 - 将视频存储在SD卡上而不是云中。我们遵守GDPR、CCPA和其他隐私法规。详细隐私政策可在 www.securitycam.com/privacy 获得。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2c-recordings",
+          "label": {
+            "en": "Recording & Playback",
+            "zh": "录制与回放"
+          },
+          "faqs": [
+            {
+              "id": "b2c-rec-001",
+              "question": {
+                "en": "How long are recordings kept?",
+                "zh": "录制保留多长时间？"
+              },
+              "answer": {
+                "en": "Recording retention depends on your storage option: (1) Free cloud storage - 7 days, (2) Basic subscription ($4.99/mo) - 30 days, (3) Standard subscription ($9.99/mo) - 90 days, (4) Premium subscription ($19.99/mo) - 365 days, (5) Local SD card - Depends on card capacity (128GB = ~30 days, 256GB = ~60 days, 512GB = ~120 days). Older recordings are automatically deleted when storage is full. To keep important footage, download and save to your computer.",
+                "zh": "录制保留时间取决于您的存储选项：(1) 免费云存储 - 7天，(2) 基础订阅($4.99/月) - 30天，(3) 标准订阅($9.99/月) - 90天，(4) 高级订阅($19.99/月) - 365天，(5) 本地SD卡 - 取决于卡容量（128GB = ~30天，256GB = ~60天，512GB = ~120天）。当存储满时，较旧的录制会自动删除。要保留重要视频，请下载并保存到您的计算机。"
+              }
+            },
+            {
+              "id": "b2c-rec-002",
+              "question": {
+                "en": "How do I download and save recordings?",
+                "zh": "我如何下载和保存录制？"
+              },
+              "answer": {
+                "en": "Downloading recordings: (1) Open mobile app and go to Playback, (2) Select the camera and date/time range, (3) Tap the video you want to download, (4) Select 'Download' from the menu, (5) Choose video quality (High/Medium/Low), (6) Video will be saved to your phone's gallery. From computer: (1) Log in to web portal at www.securitycam.com, (2) Go to Playback section, (3) Select camera and date range, (4) Click 'Download' and choose format (MP4/AVI), (5) Video will be saved to your Downloads folder.",
+                "zh": "下载录制：(1) 打开移动应用并转到回放，(2) 选择摄像头和日期/时间范围，(3) 点击您想下载的视频，(4) 从菜单中选择'下载'，(5) 选择视频质量（高/中/低），(6) 视频将保存到您的手机相册。从计算机：(1) 登录网络门户 www.securitycam.com，(2) 转到回放部分，(3) 选择摄像头和日期范围，(4) 点击'下载'并选择格式(MP4/AVI)，(5) 视频将保存到您的下载文件夹。"
+              }
+            },
+            {
+              "id": "b2c-rec-003",
+              "question": {
+                "en": "Can I search for specific events in recordings?",
+                "zh": "我可以在录制中搜索特定事件吗？"
+              },
+              "answer": {
+                "en": "Yes, our smart search feature helps find specific events: (1) Motion detection - View only clips with detected motion, (2) Person detection - Show only clips with people (AI-powered), (3) Time range - Select specific date and time window, (4) Camera selection - Filter by specific camera. To use: Open app > Playback > Apply filters > Browse results. Premium subscribers get advanced features like vehicle detection and sound detection. Search results load quickly even for months of recordings.",
+                "zh": "是的，我们的智能搜索功能可帮助查找特定事件：(1) 运动检测 - 仅查看检测到运动的片段，(2) 人员检测 - 仅显示有人的片段（AI驱动），(3) 时间范围 - 选择特定日期和时间窗口，(4) 摄像头选择 - 按特定摄像头筛选。使用方法：打开应用 > 回放 > 应用筛选器 > 浏览结果。高级订阅者可获得车辆检测和声音检测等高级功能。即使对于数月的录制，搜索结果也会快速加载。"
+              }
+            },
+            {
+              "id": "b2c-rec-004",
+              "question": {
+                "en": "What video formats are supported for export?",
+                "zh": "导出支持哪些视频格式？"
+              },
+              "answer": {
+                "en": "Supported export formats: (1) MP4 - Most compatible, recommended for sharing and playback on any device, (2) AVI - Higher quality, larger file size, (3) MOV - For Mac and iOS devices, (4) MKV - For advanced users, supports multiple audio tracks. You can also export as image sequences (JPG/PNG) at 1-30 fps. File size varies by resolution: 1080p = ~100MB/hour, 2K = ~200MB/hour, 4K = ~400MB/hour. All exports are automatically timestamped.",
+                "zh": "支持的导出格式：(1) MP4 - 最兼容，推荐用于在任何设备上共享和播放，(2) AVI - 更高质量，文件更大，(3) MOV - 用于Mac和iOS设备，(4) MKV - 用于高级用户，支持多个音轨。您也可以导出为图像序列(JPG/PNG)，帧率为1-30 fps。文件大小因分辨率而异：1080p = ~100MB/小时，2K = ~200MB/小时，4K = ~400MB/小时。所有导出都自动带有时间戳。"
+              }
+            },
+            {
+              "id": "b2c-rec-005",
+              "question": {
+                "en": "How do I set up continuous vs event-based recording?",
+                "zh": "我如何设置连续录制与事件录制？"
+              },
+              "answer": {
+                "en": "Recording modes: (1) Continuous recording - Records 24/7, uses more storage but captures everything, (2) Motion-triggered - Records only when motion detected, saves storage, (3) Schedule-based - Records during specific times (e.g., 9PM-6AM). To configure: Open app > Settings > Recording > Select camera > Choose mode. Continuous recording recommended for high-security areas. Motion-triggered recommended for home use to save storage. You can set different modes for different cameras.",
+                "zh": "录制模式：(1) 连续录制 - 24/7录制，使用更多存储但捕捉一切，(2) 运动触发 - 仅在检测到运动时录制，节省存储，(3) 基于计划 - 在特定时间录制（例如晚上9点至早上6点）。配置方法：打开应用 > 设置 > 录制 > 选择摄像头 > 选择模式。连续录制推荐用于高安全区域。运动触发录制推荐用于家庭使用以节省存储。您可以为不同的摄像头设置不同的模式。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2c-alerts",
+          "label": {
+            "en": "Alerts & Notifications",
+            "zh": "警报与通知"
+          },
+          "faqs": [
+            {
+              "id": "b2c-alert-001",
+              "question": {
+                "en": "How do I set up motion detection alerts?",
+                "zh": "我如何设置运动检测警报？"
+              },
+              "answer": {
+                "en": "Setting up motion alerts: (1) Open app > Settings > Alerts, (2) Select camera, (3) Enable 'Motion Detection', (4) Adjust sensitivity (Low/Medium/High), (5) Set quiet hours if desired (e.g., 10PM-8AM), (6) Choose notification type (Push notification, Email, or both), (7) Save settings. You'll receive instant notifications when motion is detected. High sensitivity may cause false alerts from pets or shadows. Start with Medium and adjust as needed.",
+                "zh": "设置运动警报：(1) 打开应用 > 设置 > 警报，(2) 选择摄像头，(3) 启用'运动检测'，(4) 调整灵敏度（低/中/高），(5) 如需要设置安静时间（例如晚上10点至早上8点），(6) 选择通知类型（推送通知、电子邮件或两者），(7) 保存设置。检测到运动时您将收到即时通知。高灵敏度可能导致宠物或阴影的误报。从中等开始并根据需要调整。"
+              }
+            },
+            {
+              "id": "b2c-alert-002",
+              "question": {
+                "en": "Can I set different alert rules for different times?",
+                "zh": "我可以为不同时间设置不同的警报规则吗？"
+              },
+              "answer": {
+                "en": "Yes, you can create time-based alert schedules: (1) Open app > Settings > Alerts > Advanced, (2) Create new schedule (e.g., 'Away Mode', 'Home Mode'), (3) Set time range and days of week, (4) Configure alert settings for each schedule, (5) Enable/disable as needed. Example: 'Away Mode' (9AM-6PM weekdays) - High sensitivity, all notifications. 'Home Mode' (6PM-9AM) - Medium sensitivity, only person detection. You can create up to 5 different schedules.",
+                "zh": "是的，您可以创建基于时间的警报计划：(1) 打开应用 > 设置 > 警报 > 高级，(2) 创建新计划（例如'离家模式'、'在家模式'），(3) 设置时间范围和星期几，(4) 为每个计划配置警报设置，(5) 根据需要启用/禁用。示例：'离家模式'（工作日上午9点至下午6点）- 高灵敏度，所有通知。'在家模式'（下午6点至上午9点）- 中等灵敏度，仅人员检测。您最多可以创建5个不同的计划。"
+              }
+            },
+            {
+              "id": "b2c-alert-003",
+              "question": {
+                "en": "What is person detection and how accurate is it?",
+                "zh": "什么是人员检测，准确性如何？"
+              },
+              "answer": {
+                "en": "Person detection uses AI to identify human figures in video: (1) Reduces false alerts from pets, shadows, or moving trees, (2) Accuracy typically 95%+ in good lighting, (3) Works with all camera models, (4) Available on Standard and Premium subscriptions. To enable: Settings > Alerts > Detection Type > Person Detection. Note: Accuracy decreases in poor lighting or when person is partially obscured. For best results, ensure good camera placement and adequate lighting.",
+                "zh": "人员检测使用AI来识别视频中的人形：(1) 减少来自宠物、阴影或移动树木的误报，(2) 准确性在良好光线下通常为95%以上，(3) 适用于所有摄像头型号，(4) 在标准和高级订阅上可用。启用方法：设置 > 警报 > 检测类型 > 人员检测。注意：在光线不足或人员部分被遮挡时，准确性会降低。为获得最佳结果，请确保摄像头放置良好和光线充足。"
+              }
+            },
+            {
+              "id": "b2c-alert-004",
+              "question": {
+                "en": "Why am I getting too many false alerts?",
+                "zh": "为什么我收到太多误报警？"
+              },
+              "answer": {
+                "en": "Common causes of false alerts and solutions: (1) Sensitivity too high - Reduce sensitivity from High to Medium, (2) Pets triggering motion - Enable person detection to ignore animals, (3) Moving shadows - Adjust camera angle to avoid direct sunlight, (4) Reflections - Reposition camera away from reflective surfaces, (5) Insects near lens - Clean camera lens regularly. To troubleshoot: (1) Check alert history in app, (2) Review video clips to identify patterns, (3) Adjust settings accordingly. Most users find Medium sensitivity + Person detection provides optimal balance.",
+                "zh": "误报的常见原因和解决方案：(1) 灵敏度过高 - 将灵敏度从高降低到中，(2) 宠物触发运动 - 启用人员检测以忽略动物，(3) 移动阴影 - 调整摄像头角度以避免直射阳光，(4) 反射 - 将摄像头重新放置在远离反射表面的地方，(5) 镜头附近的昆虫 - 定期清洁摄像头镜头。故障排除：(1) 检查应用中的警报历史，(2) 查看视频片段以识别模式，(3) 相应调整设置。大多数用户发现中等灵敏度+人员检测提供最佳平衡。"
+              }
+            },
+            {
+              "id": "b2c-alert-005",
+              "question": {
+                "en": "Can I create custom alert notifications?",
+                "zh": "我可以创建自定义警报通知吗？"
+              },
+              "answer": {
+                "en": "Customization options for alerts: (1) Notification text - Add custom messages (e.g., 'Front Door Alert'), (2) Sound - Choose from preset sounds or upload custom audio, (3) Vibration - Enable/disable vibration on phone, (4) LED indicator - Blink pattern on compatible devices, (5) Email format - Customize email alerts with snapshot or video clip. To customize: Settings > Alerts > Notification Settings > Edit. Premium subscribers can create up to 10 different notification profiles for different cameras.",
+                "zh": "警报通知的自定义选项：(1) 通知文本 - 添加自定义消息（例如'前门警报'），(2) 声音 - 从预设声音中选择或上传自定义音频，(3) 振动 - 在手机上启用/禁用振动，(4) LED指示灯 - 兼容设备上的闪烁模式，(5) 电子邮件格式 - 使用快照或视频片段自定义电子邮件警报。自定义方法：设置 > 警报 > 通知设置 > 编辑。高级订阅者可以为不同的摄像头创建多达10个不同的通知配置文件。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2c-troubleshooting",
+          "label": {
+            "en": "Troubleshooting & Common Issues",
+            "zh": "故障排除与常见问题"
+          },
+          "faqs": [
+            {
+              "id": "b2c-trouble-001",
+              "question": {
+                "en": "Why is my camera showing as offline?",
+                "zh": "为什么我的摄像头显示离线？"
+              },
+              "answer": {
+                "en": "Camera offline troubleshooting: (1) Check power - Ensure camera is plugged in and powered on (look for LED indicator), (2) Check WiFi - Verify camera is connected to your WiFi network, (3) Restart camera - Power off for 30 seconds, then power on, (4) Check WiFi signal - Move camera closer to router if signal is weak, (5) Restart router - Unplug router for 30 seconds, then plug back in, (6) Check firewall - Ensure router isn't blocking camera IP address. If still offline after 5 minutes, contact support.",
+                "zh": "摄像头离线故障排除：(1) 检查电源 - 确保摄像头已插入并打开（查看LED指示灯），(2) 检查WiFi - 验证摄像头已连接到您的WiFi网络，(3) 重启摄像头 - 关闭30秒，然后打开，(4) 检查WiFi信号 - 如果信号弱，将摄像头靠近路由器，(5) 重启路由器 - 拔掉路由器30秒，然后插回，(6) 检查防火墙 - 确保路由器未阻止摄像头IP地址。如果5分钟后仍然离线，请联系支持。"
+              }
+            },
+            {
+              "id": "b2c-trouble-002",
+              "question": {
+                "en": "Why is the video quality blurry or pixelated?",
+                "zh": "为什么视频质量模糊或像素化？"
+              },
+              "answer": {
+                "en": "Video quality issues and solutions: (1) Clean lens - Wipe camera lens with soft cloth to remove dust, (2) Check lighting - Ensure adequate lighting in the area, (3) Adjust focus - Some cameras have manual focus ring, try adjusting, (4) Check WiFi signal - Weak signal reduces quality, move closer to router, (5) Reduce bitrate - Lower resolution in settings if bandwidth is limited, (6) Check camera position - Ensure camera isn't too close or too far from subject. For night vision: (1) Ensure IR lights are enabled, (2) Clean lens to remove dust that blocks IR, (3) Adjust IR intensity in settings.",
+                "zh": "视频质量问题和解决方案：(1) 清洁镜头 - 用软布擦拭摄像头镜头以去除灰尘，(2) 检查光线 - 确保该区域光线充足，(3) 调整焦点 - 某些摄像头有手动对焦环，尝试调整，(4) 检查WiFi信号 - 弱信号会降低质量，靠近路由器，(5) 降低比特率 - 如果带宽有限，在设置中降低分辨率，(6) 检查摄像头位置 - 确保摄像头距离主体不会太近或太远。对于夜视：(1) 确保IR灯已启用，(2) 清洁镜头以去除阻挡IR的灰尘，(3) 在设置中调整IR强度。"
+              }
+            },
+            {
+              "id": "b2c-trouble-003",
+              "question": {
+                "en": "How do I fix audio issues or no sound in recordings?",
+                "zh": "我如何修复音频问题或录制中没有声音？"
+              },
+              "answer": {
+                "en": "Audio troubleshooting: (1) Check if camera has microphone - Not all models include audio, (2) Verify audio is enabled - Settings > Recording > Audio > Enable, (3) Check microphone placement - Ensure microphone isn't blocked, (4) Adjust microphone sensitivity - Increase sensitivity if sound is too quiet, (5) Check for interference - Move away from sources of electrical noise, (6) Test audio - Use app to record 10-second test clip and playback. If your camera doesn't have a microphone, you can add an external USB microphone to your DVR/NVR system.",
+                "zh": "音频故障排除：(1) 检查摄像头是否有麦克风 - 并非所有型号都包括音频，(2) 验证音频已启用 - 设置 > 录制 > 音频 > 启用，(3) 检查麦克风放置 - 确保麦克风未被阻挡，(4) 调整麦克风灵敏度 - 如果声音太小，增加灵敏度，(5) 检查干扰 - 远离电气噪声源，(6) 测试音频 - 使用应用录制10秒测试片段并回放。如果您的摄像头没有麦克风，您可以向DVR/NVR系统添加外部USB麦克风。"
+              }
+            },
+            {
+              "id": "b2c-trouble-004",
+              "question": {
+                "en": "What should I do if the camera won't connect to WiFi?",
+                "zh": "如果摄像头无法连接到WiFi怎么办？"
+              },
+              "answer": {
+                "en": "WiFi connection troubleshooting: (1) Verify WiFi password - Double-check you're entering correct password, (2) Check WiFi band - Ensure you're connecting to 2.4GHz (5GHz not supported on some models), (3) Move closer to router - Weak signal may prevent connection, (4) Restart router - Unplug for 30 seconds and plug back in, (5) Forget and reconnect - In app, remove camera and add again, (6) Check router settings - Ensure MAC filtering isn't blocking camera, (7) Update firmware - Connect via Ethernet temporarily to update. If using Ethernet: Connect camera directly to router with Ethernet cable, then configure WiFi from app.",
+                "zh": "WiFi连接故障排除：(1) 验证WiFi密码 - 仔细检查您是否输入了正确的密码，(2) 检查WiFi频段 - 确保您连接到2.4GHz（某些型号不支持5GHz），(3) 靠近路由器 - 弱信号可能阻止连接，(4) 重启路由器 - 拔掉30秒然后插回，(5) 忘记并重新连接 - 在应用中，移除摄像头并再次添加，(6) 检查路由器设置 - 确保MAC过滤未阻止摄像头，(7) 更新固件 - 暂时通过以太网连接以更新。如果使用以太网：直接用以太网线将摄像头连接到路由器，然后从应用配置WiFi。"
+              }
+            },
+            {
+              "id": "b2c-trouble-005",
+              "question": {
+                "en": "How do I reset the camera to factory settings?",
+                "zh": "我如何将摄像头重置为出厂设置？"
+              },
+              "answer": {
+                "en": "Factory reset procedure: (1) Locate reset button - Usually a small recessed button on camera body, (2) Power on camera and wait 30 seconds, (3) Use a paperclip or pin to press and hold reset button for 10-15 seconds, (4) Camera will restart (may take 1-2 minutes), (5) LED will flash indicating reset is complete. After reset: (1) Camera returns to default settings, (2) All configurations are erased, (3) You'll need to set up WiFi and add to app again. WARNING: Factory reset cannot be undone. Only do this if other troubleshooting fails.",
+                "zh": "出厂重置程序：(1) 找到重置按钮 - 通常是摄像头主体上的小凹陷按钮，(2) 打开摄像头并等待30秒，(3) 使用回形针或针按住重置按钮10-15秒，(4) 摄像头将重新启动（可能需要1-2分钟），(5) LED将闪烁表示重置完成。重置后：(1) 摄像头恢复为默认设置，(2) 所有配置都被擦除，(3) 您需要再次设置WiFi并添加到应用。警告：出厂重置无法撤销。仅在其他故障排除失败时才这样做。"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2c-warranty",
+          "label": {
+            "en": "Warranty & Returns",
+            "zh": "保修与退货"
+          },
+          "faqs": [
+            {
+              "id": "b2c-warr-001",
+              "question": {
+                "en": "What is the warranty coverage?",
+                "zh": "保修范围是什么？"
+              },
+              "answer": {
+                "en": "Standard warranty coverage: (1) Duration - 1 year from purchase date, (2) Coverage - Defects in materials and workmanship, (3) Exclusions - Damage from accidents, misuse, or unauthorized modifications, (4) Replacement - We replace faulty units free of charge, (5) Shipping - We cover return shipping for warranty claims. Extended warranty options: (1) 2-year warranty - $29.99, (2) 3-year warranty - $49.99, (3) Accidental damage protection - $39.99 (covers drops, water damage, etc.). To claim warranty: Contact support with proof of purchase and detailed problem description.",
+                "zh": "标准保修范围：(1) 期限 - 购买之日起1年，(2) 范围 - 材料和工艺缺陷，(3) 排除 - 事故、误用或未授权修改造成的损坏，(4) 更换 - 我们免费更换故障单位，(5) 运费 - 我们承担保修索赔的退货运费。延长保修选项：(1) 2年保修 - $29.99，(2) 3年保修 - $49.99，(3) 意外损坏保护 - $39.99（涵盖跌落、水损坏等）。提出保修索赔：联系支持并提供购买证明和详细的问题描述。"
+              }
+            },
+            {
+              "id": "b2c-warr-002",
+              "question": {
+                "en": "Can I return the camera if I'm not satisfied?",
+                "zh": "如果我不满意，我可以退回摄像头吗？"
+              },
+              "answer": {
+                "en": "Return policy: (1) Return window - 30 days from purchase for full refund, (2) Condition - Item must be unused and in original packaging, (3) Refund - Full purchase price refunded to original payment method, (4) Restocking fee - None for returns within 30 days, (5) Shipping - Customer pays return shipping. After 30 days: (1) Item can be exchanged for different model, (2) Restocking fee of 15% applies, (3) Difference in price must be paid by customer. To initiate return: Contact support at returns@securitycam.com with order number.",
+                "zh": "退货政策：(1) 退货窗口 - 购买后30天内可获得全额退款，(2) 状态 - 物品必须未使用且在原始包装中，(3) 退款 - 全额购买价格退款到原始付款方式，(4) 重新上架费 - 30天内退货无费用，(5) 运费 - 客户支付退货运费。30天后：(1) 物品可以换成不同型号，(2) 适用15%的重新上架费，(3) 价格差异必须由客户支付。启动退货：联系支持 returns@securitycam.com 并提供订单号。"
+              }
+            },
+            {
+              "id": "b2c-warr-003",
+              "question": {
+                "en": "How do I register my camera for warranty?",
+                "zh": "我如何为摄像头注册保修？"
+              },
+              "answer": {
+                "en": "Warranty registration: (1) Visit www.securitycam.com/register, (2) Enter camera serial number (found on box or camera body), (3) Provide proof of purchase (receipt or order confirmation), (4) Fill in your contact information, (5) Submit registration. Benefits of registration: (1) Warranty activation confirmed, (2) Priority support access, (3) Firmware update notifications, (4) Exclusive deals and promotions. Registration is optional but recommended. You can also register through the mobile app: Settings > Device Info > Register.",
+                "zh": "保修注册：(1) 访问 www.securitycam.com/register，(2) 输入摄像头序列号（位于盒子或摄像头主体上），(3) 提供购买证明（收据或订单确认），(4) 填写您的联系信息，(5) 提交注册。注册的好处：(1) 保修激活确认，(2) 优先支持访问，(3) 固件更新通知，(4) 独家交易和促销。注册是可选的但推荐的。您也可以通过移动应用注册：设置 > 设备信息 > 注册。"
+              }
+            },
+            {
+              "id": "b2c-warr-004",
+              "question": {
+                "en": "What is not covered by warranty?",
+                "zh": "保修不涵盖什么？"
+              },
+              "answer": {
+                "en": "Warranty exclusions: (1) Physical damage - Drops, impacts, or crushing, (2) Water damage - Submersion or liquid exposure (unless weatherproof model used improperly), (3) Misuse - Using camera for purposes other than intended, (4) Modifications - Unauthorized repairs or alterations, (5) Normal wear - Cosmetic damage or fading, (6) Software issues - Caused by user error or incompatible third-party software, (7) Consumables - Batteries or SD cards, (8) Acts of nature - Lightning strikes or extreme weather. If damage is not covered by warranty, repair services are available at $75-150 depending on issue severity.",
+                "zh": "保修排除：(1) 物理损坏 - 跌落、撞击或压碎，(2) 水损坏 - 浸没或液体暴露（除非防水型号使用不当），(3) 误用 - 将摄像头用于非预期目的，(4) 修改 - 未授权的维修或改动，(5) 正常磨损 - 化妆品损坏或褪色，(6) 软件问题 - 由用户错误或不兼容的第三方软件引起，(7) 消耗品 - 电池或SD卡，(8) 自然灾害 - 闪电或极端天气。如果损坏不在保修范围内，维修服务可用，费用为75-150美元，具体取决于问题严重程度。"
+              }
+            },
+            {
+              "id": "b2c-warr-005",
+              "question": {
+                "en": "How long does warranty claim processing take?",
+                "zh": "保修索赔处理需要多长时间？"
+              },
+              "answer": {
+                "en": "Warranty claim timeline: (1) Submission - Send claim within warranty period, (2) Review - We review claim within 2-3 business days, (3) Approval - Approved claims receive prepaid return label, (4) Return shipping - You ship camera back (typically 3-5 business days), (5) Inspection - We inspect and process (2-3 business days), (6) Replacement - New camera shipped via priority mail (2-3 business days). Total time: Typically 10-15 business days from submission to receiving replacement. Expedited processing available for Premium members (5-7 business days). You can track claim status anytime at support.securitycam.com.",
+                "zh": "保修索赔时间表：(1) 提交 - 在保修期内发送索赔，(2) 审查 - 我们在2-3个工作日内审查索赔，(3) 批准 - 批准的索赔收到预付退货标签，(4) 退货运费 - 您退回摄像头（通常3-5个工作日），(5) 检查 - 我们检查和处理（2-3个工作日），(6) 更换 - 新摄像头通过优先邮件发送（2-3个工作日）。总时间：从提交到收到更换通常需要10-15个工作日。高级会员可获得加急处理（5-7个工作日）。您可以随时在 support.securitycam.com 跟踪索赔状态。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
