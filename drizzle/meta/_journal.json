@@ -15,6 +15,13 @@
       "when": 1769821108006,
       "tag": "0001_fearless_exodus",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1769821481341,
+      "tag": "0002_quiet_lyja",
+      "breakpoints": true
     }
   ]
 }

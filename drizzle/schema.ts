@@ -41,3 +41,40 @@ export const feedbacks = mysqlTable("feedbacks", {
 
 export type Feedback = typeof feedbacks.$inferSelect;
 export type InsertFeedback = typeof feedbacks.$inferInsert;
+
+/**
+ * Auto-reply templates for categorized feedback responses.
+ * Stores predefined responses for common feedback categories.
+ */
+export const autoReplyTemplates = mysqlTable("auto_reply_templates", {
+  id: int("id").autoincrement().primaryKey(),
+  category: varchar("category", { length: 100 }).notNull().unique(),
+  keywords: text("keywords").notNull(), // JSON array of keywords
+  titleEn: varchar("titleEn", { length: 255 }).notNull(),
+  titleZh: varchar("titleZh", { length: 255 }).notNull(),
+  responseEn: text("responseEn").notNull(),
+  responseZh: text("responseZh").notNull(),
+  enabled: mysqlEnum("enabled", ["true", "false"]).default("true").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type AutoReplyTemplate = typeof autoReplyTemplates.$inferSelect;
+export type InsertAutoReplyTemplate = typeof autoReplyTemplates.$inferInsert;
+
+/**
+ * Auto-reply log for tracking sent automatic responses.
+ */
+export const autoReplyLogs = mysqlTable("auto_reply_logs", {
+  id: int("id").autoincrement().primaryKey(),
+  feedbackId: int("feedbackId").notNull(),
+  templateId: int("templateId").notNull(),
+  userEmail: varchar("userEmail", { length: 320 }).notNull(),
+  category: varchar("category", { length: 100 }).notNull(),
+  responseLanguage: varchar("responseLanguage", { length: 10 }).notNull(),
+  status: mysqlEnum("status", ["sent", "failed", "pending_review"]).default("pending_review").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type AutoReplyLog = typeof autoReplyLogs.$inferSelect;
+export type InsertAutoReplyLog = typeof autoReplyLogs.$inferInsert;

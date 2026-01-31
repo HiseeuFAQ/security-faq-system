@@ -2,7 +2,7 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import { appRouter } from "./routers";
 import type { TrpcContext } from "./_core/context";
 
-// Mock the database functions
+// Mock database functions with all required exports
 vi.mock("./db", () => ({
   createFeedback: vi.fn(async (feedback) => ({
     id: 1,
@@ -11,11 +11,24 @@ vi.mock("./db", () => ({
     updatedAt: new Date(),
   })),
   getAllFeedbacks: vi.fn(async () => []),
+  findMatchingTemplate: vi.fn(async () => null),
+  logAutoReply: vi.fn(async (log) => ({
+    id: 1,
+    ...log,
+    createdAt: new Date(),
+  })),
+  getAllAutoReplyTemplates: vi.fn(async () => []),
+  getEnabledAutoReplyTemplates: vi.fn(async () => []),
+  initializeDefaultTemplates: vi.fn(async () => {}),
 }));
 
-// Mock the email service
+// Mock email functions
 vi.mock("./_core/email", () => ({
   sendFeedbackNotification: vi.fn(async () => true),
+}));
+
+vi.mock("./_core/auto-reply-email", () => ({
+  sendAutoReplyEmail: vi.fn(async () => true),
 }));
 
 function createPublicContext(): TrpcContext {
@@ -47,6 +60,7 @@ describe("feedback.submit", () => {
     expect(result).toEqual({
       success: true,
       feedbackId: 1,
+      autoReplyStatus: "no_match",
       message: "Thank you for your feedback! We will respond within 12 hours.",
     });
   });
@@ -61,6 +75,7 @@ describe("feedback.submit", () => {
     expect(result).toEqual({
       success: true,
       feedbackId: 1,
+      autoReplyStatus: "no_match",
       message: "感谢您的反馈！我们将在 12 小时内回复。",
     });
   });

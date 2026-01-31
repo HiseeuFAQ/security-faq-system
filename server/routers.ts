@@ -2,8 +2,16 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
-import { createFeedback, getAllFeedbacks } from "./db";
+import { 
+  createFeedback, 
+  getAllFeedbacks, 
+  findMatchingTemplate, 
+  logAutoReply,
+  getAllAutoReplyTemplates,
+  initializeDefaultTemplates
+} from "./db";
 import { sendFeedbackNotification } from "./_core/email";
+import { sendAutoReplyEmail } from "./_core/auto-reply-email";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -24,6 +32,7 @@ export const appRouter = router({
     /**
      * Submit feedback from FAQ system.
      * Public endpoint - no authentication required.
+     * Automatically processes with auto-reply if matching template exists.
      */
     submit: publicProcedure
       .input(
@@ -47,16 +56,59 @@ export const appRouter = router({
             throw new Error("Failed to save feedback");
           }
 
-          // Send email notification to admin
-          const emailSent = await sendFeedbackNotification(
+          // Try to find matching auto-reply template
+          const matchingTemplate = await findMatchingTemplate(input.message);
+          let autoReplyStatus = "no_match";
+
+          if (matchingTemplate) {
+            try {
+              // Send auto-reply email to user
+              const emailSent = await sendAutoReplyEmail(
+                input.email,
+                matchingTemplate,
+                input.language as "en" | "zh"
+              );
+
+              if (emailSent) {
+                // Log the auto-reply action
+                await logAutoReply({
+                  feedbackId: feedback.id,
+                  templateId: matchingTemplate.id,
+                  userEmail: input.email,
+                  category: matchingTemplate.category,
+                  responseLanguage: input.language,
+                  status: "sent",
+                });
+                autoReplyStatus = "sent";
+              } else {
+                // Log as pending review if email failed
+                await logAutoReply({
+                  feedbackId: feedback.id,
+                  templateId: matchingTemplate.id,
+                  userEmail: input.email,
+                  category: matchingTemplate.category,
+                  responseLanguage: input.language,
+                  status: "pending_review",
+                });
+                autoReplyStatus = "pending";
+              }
+            } catch (error) {
+              console.error("[Feedback] Error sending auto-reply:", error);
+              autoReplyStatus = "error";
+            }
+          }
+
+          // Send admin notification
+          await sendFeedbackNotification(
             input.email,
             input.message,
-            input.language
+            input.language as "en" | "zh"
           );
 
           return {
             success: true,
             feedbackId: feedback.id,
+            autoReplyStatus,
             message: input.language === "en"
               ? "Thank you for your feedback! We will respond within 12 hours."
               : "感谢您的反馈！我们将在 12 小时内回复。",
@@ -76,6 +128,37 @@ export const appRouter = router({
       } catch (error) {
         console.error("[Feedback] Error fetching feedbacks:", error);
         return [];
+      }
+    }),
+  }),
+
+  autoReply: router({
+    /**
+     * Get all auto-reply templates.
+     */
+    templates: publicProcedure.query(async () => {
+      try {
+        return await getAllAutoReplyTemplates();
+      } catch (error) {
+        console.error("[AutoReply] Error fetching templates:", error);
+        return [];
+      }
+    }),
+
+    /**
+     * Initialize default auto-reply templates.
+     * Should be called once during setup.
+     */
+    initializeDefaults: publicProcedure.mutation(async () => {
+      try {
+        await initializeDefaultTemplates();
+        return {
+          success: true,
+          message: "Default templates initialized successfully",
+        };
+      } catch (error) {
+        console.error("[AutoReply] Error initializing templates:", error);
+        throw error;
       }
     }),
   }),
