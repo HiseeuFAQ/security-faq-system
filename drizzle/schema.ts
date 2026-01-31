@@ -125,3 +125,66 @@ export const notificationPreferences = mysqlTable("notification_preferences", {
 
 export type NotificationPreference = typeof notificationPreferences.$inferSelect;
 export type InsertNotificationPreference = typeof notificationPreferences.$inferInsert;
+
+/**
+ * FAQ view tracking for analytics.
+ * Records each time a user views an FAQ question.
+ */
+export const faqViews = mysqlTable("faq_views", {
+  id: int("id").autoincrement().primaryKey(),
+  faqId: varchar("faqId", { length: 100 }).notNull(),
+  faqQuestionEn: text("faqQuestionEn"),
+  faqQuestionZh: text("faqQuestionZh"),
+  category: varchar("category", { length: 100 }).notNull(),
+  subcategory: varchar("subcategory", { length: 100 }).notNull(),
+  userEmail: varchar("userEmail", { length: 320 }),
+  language: varchar("language", { length: 10 }).default("en").notNull(),
+  viewedAt: timestamp("viewedAt").defaultNow().notNull(),
+});
+
+export type FAQView = typeof faqViews.$inferSelect;
+export type InsertFAQView = typeof faqViews.$inferInsert;
+
+/**
+ * FAQ analytics summary for dashboard.
+ * Stores aggregated view counts and statistics per FAQ.
+ */
+export const faqAnalytics = mysqlTable("faq_analytics", {
+  id: int("id").autoincrement().primaryKey(),
+  faqId: varchar("faqId", { length: 100 }).notNull().unique(),
+  faqQuestionEn: text("faqQuestionEn"),
+  faqQuestionZh: text("faqQuestionZh"),
+  category: varchar("category", { length: 100 }).notNull(),
+  subcategory: varchar("subcategory", { length: 100 }).notNull(),
+  totalViews: int("totalViews").default(0).notNull(),
+  viewsToday: int("viewsToday").default(0).notNull(),
+  viewsThisWeek: int("viewsThisWeek").default(0).notNull(),
+  viewsThisMonth: int("viewsThisMonth").default(0).notNull(),
+  lastViewedAt: timestamp("lastViewedAt"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type FAQAnalytic = typeof faqAnalytics.$inferSelect;
+export type InsertFAQAnalytic = typeof faqAnalytics.$inferInsert;
+
+/**
+ * Feedback analytics summary for dashboard.
+ * Stores aggregated feedback statistics.
+ */
+export const feedbackAnalytics = mysqlTable("feedback_analytics", {
+  id: int("id").autoincrement().primaryKey(),
+  totalFeedbacks: int("totalFeedbacks").default(0).notNull(),
+  feedbacksToday: int("feedbacksToday").default(0).notNull(),
+  feedbacksThisWeek: int("feedbacksThisWeek").default(0).notNull(),
+  feedbacksThisMonth: int("feedbacksThisMonth").default(0).notNull(),
+  pendingFeedbacks: int("pendingFeedbacks").default(0).notNull(),
+  resolvedFeedbacks: int("resolvedFeedbacks").default(0).notNull(),
+  autoReplySuccessRate: int("autoReplySuccessRate").default(0).notNull(),
+  averageResponseTime: int("averageResponseTime").default(0).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type FeedbackAnalytic = typeof feedbackAnalytics.$inferSelect;
+export type InsertFeedbackAnalytic = typeof feedbackAnalytics.$inferInsert;
