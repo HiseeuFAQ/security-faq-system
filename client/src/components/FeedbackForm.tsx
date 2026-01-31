@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -10,7 +11,23 @@ export default function FeedbackForm() {
   const { language, t } = useLanguage();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Use tRPC mutation for feedback submission
+  const submitFeedback = trpc.feedback.submit.useMutation({
+    onSuccess: (data) => {
+      toast.success(data.message);
+      setEmail("");
+      setMessage("");
+    },
+    onError: (error) => {
+      toast.error(
+        language === "en"
+          ? "Failed to submit feedback. Please try again."
+          : "反馈提交失败，请重试。"
+      );
+      console.error("Feedback submission error:", error);
+    },
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,23 +41,33 @@ export default function FeedbackForm() {
       return;
     }
 
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call - in production, this would send to your backend
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // Log feedback for demonstration
-      console.log("Feedback submitted:", { email, message, timestamp: new Date() });
-
-      toast.success(t("footer.submitSuccess"));
-      setEmail("");
-      setMessage("");
-    } catch (error) {
-      toast.error(t("footer.submitError"));
-    } finally {
-      setIsSubmitting(false);
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error(
+        language === "en"
+          ? "Please enter a valid email address"
+          : "请输入有效的电子邮件地址"
+      );
+      return;
     }
+
+    // Validate message length
+    if (message.length < 10) {
+      toast.error(
+        language === "en"
+          ? "Message must be at least 10 characters"
+          : "消息必须至少 10 个字符"
+      );
+      return;
+    }
+
+    // Submit feedback via tRPC
+    submitFeedback.mutate({
+      email,
+      message,
+      language: language as "en" | "zh",
+    });
   };
 
   return (
@@ -54,7 +81,7 @@ export default function FeedbackForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
-          disabled={isSubmitting}
+          disabled={submitFeedback.isPending}
           required
         />
       </div>
@@ -67,7 +94,7 @@ export default function FeedbackForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={t("footer.feedbackPlaceholder")}
-          disabled={isSubmitting}
+          disabled={submitFeedback.isPending}
           rows={4}
           required
         />
@@ -75,11 +102,11 @@ export default function FeedbackForm() {
 
       <Button
         type="submit"
-        disabled={isSubmitting}
+        disabled={submitFeedback.isPending}
         className="w-full"
       >
-        {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-        {isSubmitting ? t("footer.submitting") : t("footer.submit")}
+        {submitFeedback.isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+        {submitFeedback.isPending ? t("footer.submitting") : t("footer.submit")}
       </Button>
     </form>
   );

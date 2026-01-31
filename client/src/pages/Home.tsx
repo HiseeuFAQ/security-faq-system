@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useAuth } from "@/_core/hooks/useAuth";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {
   getCategories,
@@ -25,6 +26,10 @@ import { cn } from "@/lib/utils";
  */
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const { language, setLanguage, t } = useLanguage();
   const categories = getCategories();
   const [selectedCategory, setSelectedCategory] = useState(
