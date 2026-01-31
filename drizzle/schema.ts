@@ -78,3 +78,50 @@ export const autoReplyLogs = mysqlTable("auto_reply_logs", {
 
 export type AutoReplyLog = typeof autoReplyLogs.$inferSelect;
 export type InsertAutoReplyLog = typeof autoReplyLogs.$inferInsert;
+
+/**
+ * Notifications table for storing system and user notifications.
+ * Tracks notification status, read/unread state, and delivery method.
+ */
+export const notifications = mysqlTable("notifications", {
+  id: int("id").autoincrement().primaryKey(),
+  feedbackId: int("feedbackId").notNull(),
+  userEmail: varchar("userEmail", { length: 320 }).notNull(),
+  type: mysqlEnum("type", [
+    "feedback_submitted",
+    "feedback_read",
+    "feedback_resolved",
+    "auto_reply_sent",
+    "status_updated",
+  ]).notNull(),
+  titleEn: varchar("titleEn", { length: 255 }).notNull(),
+  titleZh: varchar("titleZh", { length: 255 }).notNull(),
+  contentEn: text("contentEn").notNull(),
+  contentZh: text("contentZh").notNull(),
+  isRead: mysqlEnum("isRead", ["true", "false"]).default("false").notNull(),
+  emailSent: mysqlEnum("emailSent", ["true", "false"]).default("false").notNull(),
+  language: varchar("language", { length: 10 }).default("en").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Notification = typeof notifications.$inferSelect;
+export type InsertNotification = typeof notifications.$inferInsert;
+
+/**
+ * Notification preferences for users.
+ * Stores user preferences for notification delivery methods and types.
+ */
+export const notificationPreferences = mysqlTable("notification_preferences", {
+  id: int("id").autoincrement().primaryKey(),
+  userEmail: varchar("userEmail", { length: 320 }).notNull().unique(),
+  emailNotifications: mysqlEnum("emailNotifications", ["true", "false"]).default("true").notNull(),
+  feedbackSubmittedNotification: mysqlEnum("feedbackSubmittedNotification", ["true", "false"]).default("true").notNull(),
+  statusUpdateNotification: mysqlEnum("statusUpdateNotification", ["true", "false"]).default("true").notNull(),
+  autoReplyNotification: mysqlEnum("autoReplyNotification", ["true", "false"]).default("true").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type NotificationPreference = typeof notificationPreferences.$inferSelect;
+export type InsertNotificationPreference = typeof notificationPreferences.$inferInsert;

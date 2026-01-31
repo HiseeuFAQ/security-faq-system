@@ -12,10 +12,20 @@ import {
 } from "./db";
 import { sendFeedbackNotification } from "./_core/email";
 import { sendAutoReplyEmail } from "./_core/auto-reply-email";
+import {
+  createNotification,
+  getUserNotifications,
+  getUnreadNotifications,
+  markNotificationAsRead,
+  markAllNotificationsAsRead,
+  deleteNotification,
+  getOrCreateNotificationPreferences,
+  updateNotificationPreferences,
+  getUnreadNotificationCount,
+} from "./notifications";
 import { z } from "zod";
 
 export const appRouter = router({
-  // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
   system: systemRouter,
   auth: router({
     me: publicProcedure.query(opts => opts.ctx.user),
@@ -29,11 +39,6 @@ export const appRouter = router({
   }),
 
   feedback: router({
-    /**
-     * Submit feedback from FAQ system.
-     * Public endpoint - no authentication required.
-     * Automatically processes with auto-reply if matching template exists.
-     */
     submit: publicProcedure
       .input(
         z.object({
@@ -44,7 +49,6 @@ export const appRouter = router({
       )
       .mutation(async ({ input }) => {
         try {
-          // Save feedback to database
           const feedback = await createFeedback({
             email: input.email,
             message: input.message,
@@ -56,13 +60,25 @@ export const appRouter = router({
             throw new Error("Failed to save feedback");
           }
 
-          // Try to find matching auto-reply template
+          // Create notification for feedback submission
+          await createNotification({
+            feedbackId: feedback.id,
+            userEmail: input.email,
+            type: "feedback_submitted",
+            titleEn: "Feedback Received",
+            titleZh: "反馈已收到",
+            contentEn: "Thank you for submitting your feedback. We will review it and respond within 12 hours.",
+            contentZh: "感谢您提交的反馈。我们将在 12 小时内审核并回复。",
+            isRead: "false",
+            emailSent: "false",
+            language: input.language,
+          });
+
           const matchingTemplate = await findMatchingTemplate(input.message);
           let autoReplyStatus = "no_match";
 
           if (matchingTemplate) {
             try {
-              // Send auto-reply email to user
               const emailSent = await sendAutoReplyEmail(
                 input.email,
                 matchingTemplate,
@@ -70,7 +86,6 @@ export const appRouter = router({
               );
 
               if (emailSent) {
-                // Log the auto-reply action
                 await logAutoReply({
                   feedbackId: feedback.id,
                   templateId: matchingTemplate.id,
@@ -79,9 +94,23 @@ export const appRouter = router({
                   responseLanguage: input.language,
                   status: "sent",
                 });
+                
+                // Create auto-reply notification
+                await createNotification({
+                  feedbackId: feedback.id,
+                  userEmail: input.email,
+                  type: "auto_reply_sent",
+                  titleEn: "Auto-Reply Sent",
+                  titleZh: "自动回复已发送",
+                  contentEn: matchingTemplate.responseEn,
+                  contentZh: matchingTemplate.responseZh,
+                  isRead: "false",
+                  emailSent: "true",
+                  language: input.language,
+                });
+                
                 autoReplyStatus = "sent";
               } else {
-                // Log as pending review if email failed
                 await logAutoReply({
                   feedbackId: feedback.id,
                   templateId: matchingTemplate.id,
@@ -98,7 +127,6 @@ export const appRouter = router({
             }
           }
 
-          // Send admin notification
           await sendFeedbackNotification(
             input.email,
             input.message,
@@ -119,9 +147,6 @@ export const appRouter = router({
         }
       }),
 
-    /**
-     * Get all feedbacks (for admin review).
-     */
     list: publicProcedure.query(async () => {
       try {
         return await getAllFeedbacks();
@@ -133,9 +158,6 @@ export const appRouter = router({
   }),
 
   autoReply: router({
-    /**
-     * Get all auto-reply templates.
-     */
     templates: publicProcedure.query(async () => {
       try {
         return await getAllAutoReplyTemplates();
@@ -145,10 +167,6 @@ export const appRouter = router({
       }
     }),
 
-    /**
-     * Initialize default auto-reply templates.
-     * Should be called once during setup.
-     */
     initializeDefaults: publicProcedure.mutation(async () => {
       try {
         await initializeDefaultTemplates();
@@ -161,6 +179,109 @@ export const appRouter = router({
         throw error;
       }
     }),
+  }),
+
+  notifications: router({
+    list: publicProcedure
+      .input(z.object({ userEmail: z.string().email() }))
+      .query(async ({ input }) => {
+        try {
+          return await getUserNotifications(input.userEmail);
+        } catch (error) {
+          console.error("[Notifications] Error fetching notifications:", error);
+          return [];
+        }
+      }),
+
+    unread: publicProcedure
+      .input(z.object({ userEmail: z.string().email() }))
+      .query(async ({ input }) => {
+        try {
+          return await getUnreadNotifications(input.userEmail);
+        } catch (error) {
+          console.error("[Notifications] Error fetching unread:", error);
+          return [];
+        }
+      }),
+
+    unreadCount: publicProcedure
+      .input(z.object({ userEmail: z.string().email() }))
+      .query(async ({ input }) => {
+        try {
+          return await getUnreadNotificationCount(input.userEmail);
+        } catch (error) {
+          console.error("[Notifications] Error fetching unread count:", error);
+          return 0;
+        }
+      }),
+
+    markAsRead: publicProcedure
+      .input(z.object({ notificationId: z.number() }))
+      .mutation(async ({ input }) => {
+        try {
+          const success = await markNotificationAsRead(input.notificationId);
+          return { success };
+        } catch (error) {
+          console.error("[Notifications] Error marking as read:", error);
+          throw error;
+        }
+      }),
+
+    markAllAsRead: publicProcedure
+      .input(z.object({ userEmail: z.string().email() }))
+      .mutation(async ({ input }) => {
+        try {
+          const success = await markAllNotificationsAsRead(input.userEmail);
+          return { success };
+        } catch (error) {
+          console.error("[Notifications] Error marking all as read:", error);
+          throw error;
+        }
+      }),
+
+    delete: publicProcedure
+      .input(z.object({ notificationId: z.number() }))
+      .mutation(async ({ input }) => {
+        try {
+          const success = await deleteNotification(input.notificationId);
+          return { success };
+        } catch (error) {
+          console.error("[Notifications] Error deleting notification:", error);
+          throw error;
+        }
+      }),
+
+    preferences: publicProcedure
+      .input(z.object({ userEmail: z.string().email() }))
+      .query(async ({ input }) => {
+        try {
+          return await getOrCreateNotificationPreferences(input.userEmail);
+        } catch (error) {
+          console.error("[Notifications] Error fetching preferences:", error);
+          return null;
+        }
+      }),
+
+    updatePreferences: publicProcedure
+      .input(
+        z.object({
+          userEmail: z.string().email(),
+          emailNotifications: z.enum(["true", "false"]).optional(),
+          feedbackSubmittedNotification: z.enum(["true", "false"]).optional(),
+          statusUpdateNotification: z.enum(["true", "false"]).optional(),
+          autoReplyNotification: z.enum(["true", "false"]).optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        try {
+          const { userEmail, ...updates } = input;
+          const success = await updateNotificationPreferences(userEmail, updates);
+          return { success };
+        } catch (error) {
+          console.error("[Notifications] Error updating preferences:", error);
+          throw error;
+        }
+      }),
   }),
 });
 

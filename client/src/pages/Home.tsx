@@ -12,6 +12,7 @@ import FAQSearch from "@/components/FAQSearch";
 import CategoryNav from "@/components/CategoryNav";
 import FAQList from "@/components/FAQList";
 import FeedbackForm from "@/components/FeedbackForm";
+import NotificationBell from "@/components/NotificationBell";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -86,6 +87,11 @@ export default function Home() {
                 {t("header.subtitle")}
               </p>
             </div>
+
+            {/* Notification Bell */}
+            {getSupportEmail() && (
+              <NotificationBell userEmail={getSupportEmail()} />
+            )}
 
             {/* Language Toggle */}
             <Button

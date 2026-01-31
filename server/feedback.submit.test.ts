@@ -2,8 +2,9 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import { appRouter } from "./routers";
 import type { TrpcContext } from "./_core/context";
 
-// Mock database functions with all required exports
+// Mock all database and notification functions
 vi.mock("./db", () => ({
+  getDb: vi.fn(async () => null),
   createFeedback: vi.fn(async (feedback) => ({
     id: 1,
     ...feedback,
@@ -12,14 +13,25 @@ vi.mock("./db", () => ({
   })),
   getAllFeedbacks: vi.fn(async () => []),
   findMatchingTemplate: vi.fn(async () => null),
-  logAutoReply: vi.fn(async (log) => ({
-    id: 1,
-    ...log,
-    createdAt: new Date(),
-  })),
+  logAutoReply: vi.fn(async () => {}),
   getAllAutoReplyTemplates: vi.fn(async () => []),
   getEnabledAutoReplyTemplates: vi.fn(async () => []),
   initializeDefaultTemplates: vi.fn(async () => {}),
+}));
+
+vi.mock("./notifications", () => ({
+  createNotification: vi.fn(async () => ({
+    id: 1,
+    createdAt: new Date(),
+  })),
+  getUserNotifications: vi.fn(async () => []),
+  getUnreadNotifications: vi.fn(async () => []),
+  markNotificationAsRead: vi.fn(async () => true),
+  markAllNotificationsAsRead: vi.fn(async () => true),
+  deleteNotification: vi.fn(async () => true),
+  getOrCreateNotificationPreferences: vi.fn(async () => null),
+  updateNotificationPreferences: vi.fn(async () => true),
+  getUnreadNotificationCount: vi.fn(async () => 0),
 }));
 
 // Mock email functions
