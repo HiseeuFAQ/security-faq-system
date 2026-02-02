@@ -10,14 +10,18 @@ import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 import HiseeuHome from "./pages/HiseeuHome";
+import HiseeuHomeV2 from "./pages/HiseeuHomeV2";
 import HiseeuAdmin from "./pages/HiseeuAdmin";
+import HiseeuAdminV2 from "./pages/HiseeuAdminV2";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/hiseeu"} component={HiseeuHome} />
-      <Route path={"/hiseeu/admin"} component={HiseeuAdmin} />
+      <Route path={"/hiseeu"} component={HiseeuHomeV2} />
+      <Route path={"/hiseeu-v1"} component={HiseeuHome} />
+      <Route path={"/hiseeu/admin"} component={HiseeuAdminV2} />
+      <Route path={"/hiseeu/admin-v1"} component={HiseeuAdmin} />
       <Route path={"/"} component={Home} />
       <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/analytics"} component={AnalyticsDashboard} />
