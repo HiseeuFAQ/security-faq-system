@@ -5,14 +5,19 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { HiseeuLanguageProvider } from "./contexts/HiseeuLanguageContext";
 import Home from "./pages/Home";
 import AdminDashboard from "./pages/AdminDashboard";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
+import HiseeuHome from "./pages/HiseeuHome";
+import HiseeuAdmin from "./pages/HiseeuAdmin";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
+      <Route path={"/hiseeu"} component={HiseeuHome} />
+      <Route path={"/hiseeu/admin"} component={HiseeuAdmin} />
       <Route path={"/"} component={Home} />
       <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/analytics"} component={AnalyticsDashboard} />
@@ -36,10 +41,12 @@ function App() {
         // switchable
       >
         <LanguageProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-          </TooltipProvider>
+          <HiseeuLanguageProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+            </TooltipProvider>
+          </HiseeuLanguageProvider>
         </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>

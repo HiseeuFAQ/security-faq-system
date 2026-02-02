@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "company": "Hiseeu",
+    "version": "1.0",
+    "languages": ["en", "zh", "es", "fr", "de", "ru"],
+    "defaultLanguage": "en",
+    "lastUpdated": "2026-02-01",
+    "supportEmail": "sales@hiseeu.com",
+    "officialWebsite": "https://www.hiseeu.com/"
+  },
+  "translations": {
+    "en": {
+      "siteTitle": "Hiseeu Security Camera FAQ",
+      "siteSubtitle": "Find answers to your security camera questions instantly",
+      "officialWebsite": "Visit Official Website",
+      "products": "Products",
+      "wirelessSeries": "Wireless Series",
+      "wiredSeries": "Wired Series",
+      "eSeriesSeries": "E Series",
+      "scenarios": "Application Scenarios",
+      "home": "Home",
+      "commercial": "Commercial",
+      "industrial": "Industrial",
+      "searchPlaceholder": "Search FAQ...",
+      "noResults": "No results found. Please try different keywords.",
+      "feedback": "Feedback",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit",
+      "lastUpdated": "Last Updated",
+      "contactUs": "Contact Us",
+      "browserSupport": "This FAQ works on all modern browsers",
+      "b2cContent": "For Individuals",
+      "b2bContent": "For Businesses"
+    },
+    "zh": {
+      "siteTitle": "海康威视安全摄像头 FAQ",
+      "siteSubtitle": "快速找到您的安全摄像头问题答案",
+      "officialWebsite": "访问官方网站",
+      "products": "产品",
+      "wirelessSeries": "无线系列",
+      "wiredSeries": "有线系列",
+      "eSeriesSeries": "E系列",
+      "scenarios": "应用场景",
+      "home": "家用",
+      "commercial": "商业",
+      "industrial": "行业",
+      "searchPlaceholder": "搜索 FAQ...",
+      "noResults": "未找到结果。请尝试其他关键词。",
+      "feedback": "反馈",
+      "email": "邮箱",
+      "message": "消息",
+      "submit": "提交",
+      "lastUpdated": "最后更新",
+      "contactUs": "联系我们",
+      "browserSupport": "此 FAQ 支持所有现代浏览器",
+      "b2cContent": "个人客户",
+      "b2bContent": "企业客户"
+    },
+    "es": {
+      "siteTitle": "Preguntas Frecuentes sobre Cámaras de Seguridad Hiseeu",
+      "siteSubtitle": "Encuentre respuestas a sus preguntas sobre cámaras de seguridad al instante",
+      "officialWebsite": "Visitar Sitio Oficial",
+      "products": "Productos",
+      "wirelessSeries": "Serie Inalámbrica",
+      "wiredSeries": "Serie Alámbrica",
+      "eSeriesSeries": "Serie E",
+      "scenarios": "Escenarios de Aplicación",
+      "home": "Hogar",
+      "commercial": "Comercial",
+      "industrial": "Industrial",
+      "searchPlaceholder": "Buscar preguntas frecuentes...",
+      "noResults": "No se encontraron resultados. Intente con palabras clave diferentes.",
+      "feedback": "Comentarios",
+      "email": "Correo Electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar",
+      "lastUpdated": "Última Actualización",
+      "contactUs": "Contáctenos",
+      "browserSupport": "Estas preguntas frecuentes funcionan en todos los navegadores modernos",
+      "b2cContent": "Para Individuos",
+      "b2bContent": "Para Empresas"
+    },
+    "fr": {
+      "siteTitle": "FAQ Caméras de Sécurité Hiseeu",
+      "siteSubtitle": "Trouvez instantanément les réponses à vos questions sur les caméras de sécurité",
+      "officialWebsite": "Visiter le Site Officiel",
+      "products": "Produits",
+      "wirelessSeries": "Série Sans Fil",
+      "wiredSeries": "Série Filaire",
+      "eSeriesSeries": "Série E",
+      "scenarios": "Scénarios d'Application",
+      "home": "Maison",
+      "commercial": "Commercial",
+      "industrial": "Industriel",
+      "searchPlaceholder": "Rechercher les FAQ...",
+      "noResults": "Aucun résultat trouvé. Essayez d'autres mots-clés.",
+      "feedback": "Commentaires",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Soumettre",
+      "lastUpdated": "Dernière Mise à Jour",
+      "contactUs": "Nous Contacter",
+      "browserSupport": "Cette FAQ fonctionne sur tous les navigateurs modernes",
+      "b2cContent": "Pour les Particuliers",
+      "b2bContent": "Pour les Entreprises"
+    },
+    "de": {
+      "siteTitle": "Hiseeu Sicherheitskamera - Häufig Gestellte Fragen",
+      "siteSubtitle": "Finden Sie sofort Antworten auf Ihre Fragen zu Sicherheitskameras",
+      "officialWebsite": "Offizielle Website Besuchen",
+      "products": "Produkte",
+      "wirelessSeries": "Kabellose Serie",
+      "wiredSeries": "Kabelgebundene Serie",
+      "eSeriesSeries": "E-Serie",
+      "scenarios": "Anwendungsszenarien",
+      "home": "Zuhause",
+      "commercial": "Gewerblich",
+      "industrial": "Industrie",
+      "searchPlaceholder": "FAQ durchsuchen...",
+      "noResults": "Keine Ergebnisse gefunden. Versuchen Sie andere Schlüsselwörter.",
+      "feedback": "Rückmeldung",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "submit": "Absenden",
+      "lastUpdated": "Zuletzt Aktualisiert",
+      "contactUs": "Kontaktieren Sie Uns",
+      "browserSupport": "Diese FAQ funktioniert in allen modernen Browsern",
+      "b2cContent": "Für Einzelpersonen",
+      "b2bContent": "Für Unternehmen"
+    },
+    "ru": {
+      "siteTitle": "Часто Задаваемые Вопросы о Камерах Безопасности Hiseeu",
+      "siteSubtitle": "Найдите ответы на вопросы о камерах безопасности мгновенно",
+      "officialWebsite": "Посетить Официальный Сайт",
+      "products": "Продукты",
+      "wirelessSeries": "Беспроводная Серия",
+      "wiredSeries": "Проводная Серия",
+      "eSeriesSeries": "Серия E",
+      "scenarios": "Сценарии Применения",
+      "home": "Дом",
+      "commercial": "Коммерческий",
+      "industrial": "Промышленный",
+      "searchPlaceholder": "Поиск в FAQ...",
+      "noResults": "Результаты не найдены. Попробуйте другие ключевые слова.",
+      "feedback": "Обратная Связь",
+      "email": "Электронная Почта",
+      "message": "Сообщение",
+      "submit": "Отправить",
+      "lastUpdated": "Последнее Обновление",
+      "contactUs": "Свяжитесь с Нами",
+      "browserSupport": "Эта FAQ работает во всех современных браузерах",
+      "b2cContent": "Для Частных Лиц",
+      "b2bContent": "Для Компаний"
+    }
+  },
+  "products": [
+    {
+      "id": "wireless",
+      "key": "wireless",
+      "order": 1,
+      "names": {
+        "en": "Wireless Series",
+        "zh": "无线系列",
+        "es": "Serie Inalámbrica",
+        "fr": "Série Sans Fil",
+        "de": "Kabellose Serie",
+        "ru": "Беспроводная Серия"
+      }
+    },
+    {
+      "id": "wired",
+      "key": "wired",
+      "order": 2,
+      "names": {
+        "en": "Wired Series",
+        "zh": "有线系列",
+        "es": "Serie Alámbrica",
+        "fr": "Série Filaire",
+        "de": "Kabelgebundene Serie",
+        "ru": "Проводная Серия"
+      }
+    },
+    {
+      "id": "e-series",
+      "key": "e-series",
+      "order": 3,
+      "names": {
+        "en": "E Series",
+        "zh": "E系列",
+        "es": "Serie E",
+        "fr": "Série E",
+        "de": "E-Serie",
+        "ru": "Серия E"
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "home",
+      "key": "home",
+      "order": 1,
+      "customerType": "b2c",
+      "names": {
+        "en": "Home",
+        "zh": "家用",
+        "es": "Hogar",
+        "fr": "Maison",
+        "de": "Zuhause",
+        "ru": "Дом"
+      }
+    },
+    {
+      "id": "commercial",
+      "key": "commercial",
+      "order": 2,
+      "customerType": "b2b",
+      "names": {
+        "en": "Commercial",
+        "zh": "商业",
+        "es": "Comercial",
+        "fr": "Commercial",
+        "de": "Gewerblich",
+        "ru": "Коммерческий"
+      }
+    },
+    {
+      "id": "industrial",
+      "key": "industrial",
+      "order": 3,
+      "customerType": "b2b",
+      "names": {
+        "en": "Industrial",
+        "zh": "行业",
+        "es": "Industrial",
+        "fr": "Industriel",
+        "de": "Industrie",
+        "ru": "Промышленный"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "id": "wireless-home-001",
+      "product": "wireless",
+      "scenario": "home",
+      "customerType": "b2c",
+      "priority": "high",
+      "order": 1,
+      "content": {
+        "en": {
+          "question": "How do I choose the right wireless camera for my home?",
+          "answer": "When selecting a wireless camera for your home, consider these key factors: 1) Coverage area - measure the distance and angle you need to monitor. 2) Resolution - 1080p is suitable for most homes, 2K/4K for larger areas. 3) Night vision - ensure it has infrared capability for dark areas. 4) Weather resistance - choose IP65 or higher for outdoor use. 5) Storage options - decide between cloud or local storage. 6) Power source - battery or solar-powered options are available."
+        },
+        "zh": {
+          "question": "我如何为家中选择合适的无线摄像头？",
+          "answer": "为家中选择无线摄像头时，请考虑以下关键因素：1) 覆盖范围 - 测量您需要监控的距离和角度。2) 分辨率 - 1080p 适合大多数家庭，2K/4K 适合较大区域。3) 夜视功能 - 确保在黑暗区域有红外功能。4) 防水等级 - 户外使用选择 IP65 或更高。5) 存储方式 - 选择云存储或本地存储。6) 电源 - 提供电池或太阳能供电选项。"
+        },
+        "es": {
+          "question": "¿Cómo elijo la cámara inalámbrica adecuada para mi hogar?",
+          "answer": "Al seleccionar una cámara inalámbrica para su hogar, considere estos factores clave: 1) Área de cobertura - mida la distancia y el ángulo que necesita monitorear. 2) Resolución - 1080p es adecuado para la mayoría de hogares, 2K/4K para áreas más grandes. 3) Visión nocturna - asegúrese de que tenga capacidad infrarroja. 4) Resistencia climática - elija IP65 o superior para uso en exteriores. 5) Opciones de almacenamiento - decida entre almacenamiento en la nube o local. 6) Fuente de energía - hay opciones alimentadas por batería o energía solar."
+        },
+        "fr": {
+          "question": "Comment choisir la bonne caméra sans fil pour ma maison?",
+          "answer": "Lors de la sélection d'une caméra sans fil pour votre maison, considérez ces facteurs clés: 1) Zone de couverture - mesurez la distance et l'angle que vous devez surveiller. 2) Résolution - 1080p convient à la plupart des maisons, 2K/4K pour les zones plus grandes. 3) Vision nocturne - assurez-vous qu'elle a une capacité infrarouge. 4) Résistance aux intempéries - choisissez IP65 ou supérieur pour une utilisation en extérieur. 5) Options de stockage - décidez entre le stockage en nuage ou local. 6) Source d'alimentation - des options alimentées par batterie ou énergie solaire sont disponibles."
+        },
+        "de": {
+          "question": "Wie wähle ich die richtige kabellose Kamera für mein Zuhause?",
+          "answer": "Bei der Auswahl einer kabellosen Kamera für Ihr Zuhause sollten Sie diese Schlüsselfaktoren berücksichtigen: 1) Erfassungsbereich - messen Sie die Entfernung und den Winkel, den Sie überwachen müssen. 2) Auflösung - 1080p ist für die meisten Häuser geeignet, 2K/4K für größere Bereiche. 3) Nachtsicht - stellen Sie sicher, dass sie Infrarotfähigkeit hat. 4) Witterungsbeständigkeit - wählen Sie IP65 oder höher für den Außeneinsatz. 5) Speicheroptionen - entscheiden Sie sich zwischen Cloud- oder lokalem Speicher. 6) Stromquelle - batterie- oder solarbetriebene Optionen sind verfügbar."
+        },
+        "ru": {
+          "question": "Как выбрать подходящую беспроводную камеру для дома?",
+          "answer": "При выборе беспроводной камеры для дома учитывайте эти ключевые факторы: 1) Область охвата - измерьте расстояние и угол, который вам нужно контролировать. 2) Разрешение - 1080p подходит для большинства домов, 2K/4K для больших площадей. 3) Ночное видение - убедитесь, что она имеет инфракрасные возможности. 4) Устойчивость к погодным условиям - выбирайте IP65 или выше для наружного использования. 5) Варианты хранения - выберите облачное или локальное хранилище. 6) Источник питания - доступны варианты с батарейным или солнечным питанием."
+        }
+      }
+    }
+  ]
+}
