@@ -12,7 +12,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations: Record<Language, Record<string, string>> = {
   en: {
-    "header.title": "Security Camera FAQ",
+    "header.title": "Hiseeu FAQ",
     "header.subtitle": "Find answers to your questions instantly",
     "header.search": "Search FAQ...",
     "header.language": "中文",
@@ -37,7 +37,7 @@ const translations: Record<Language, Record<string, string>> = {
     "common.error": "An error occurred. Please refresh the page.",
   },
   zh: {
-    "header.title": "安防监控 FAQ",
+    "header.title": "Hiseeu FAQ",
     "header.subtitle": "快速找到您的问题答案",
     "header.search": "搜索 FAQ...",
     "header.language": "EN",
