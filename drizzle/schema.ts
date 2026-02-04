@@ -188,3 +188,88 @@ export const feedbackAnalytics = mysqlTable("feedback_analytics", {
 
 export type FeedbackAnalytic = typeof feedbackAnalytics.$inferSelect;
 export type InsertFeedbackAnalytic = typeof feedbackAnalytics.$inferInsert;
+
+/**
+ * FAQ content management table for CMS.
+ * Stores FAQ questions and answers with multi-language support and rich text.
+ */
+export const faqs = mysqlTable("faqs", {
+  id: int("id").autoincrement().primaryKey(),
+  slug: varchar("slug", { length: 255 }).notNull().unique(),
+  status: mysqlEnum("status", ["draft", "published"]).default("draft").notNull(),
+  
+  // Classification
+  productType: varchar("productType", { length: 50 }).notNull(), // 'wireless', 'wired', 'eseries'
+  scenario: varchar("scenario", { length: 50 }).notNull(), // 'home', 'commercial', 'industrial'
+  
+  // Multi-language content (JSON)
+  questions: text("questions").notNull(), // JSON: { "en": "...", "zh": "...", ... }
+  answers: text("answers").notNull(), // JSON: { "en": "<html>...</html>", "zh": "<html>...</html>", ... }
+  
+  // Metadata
+  featuredImageUrl: varchar("featuredImageUrl", { length: 500 }),
+  seoTitle: varchar("seoTitle", { length: 255 }),
+  seoDescription: text("seoDescription"),
+  tags: text("tags"), // JSON: ["tag1", "tag2", ...]
+  
+  // Versioning
+  version: int("version").default(1).notNull(),
+  publishedAt: timestamp("publishedAt"),
+  
+  // Audit fields
+  createdBy: int("createdBy").notNull(),
+  updatedBy: int("updatedBy"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type FAQ = typeof faqs.$inferSelect;
+export type InsertFAQ = typeof faqs.$inferInsert;
+
+/**
+ * FAQ version history table for tracking changes.
+ */
+export const faqVersions = mysqlTable("faq_versions", {
+  id: int("id").autoincrement().primaryKey(),
+  faqId: int("faqId").notNull(),
+  
+  // Version info
+  version: int("version").notNull(),
+  changeSummary: varchar("changeSummary", { length: 500 }),
+  
+  // Snapshot data
+  questions: text("questions").notNull(),
+  answers: text("answers").notNull(),
+  status: mysqlEnum("status", ["draft", "published"]),
+  
+  // Audit
+  changedBy: int("changedBy").notNull(),
+  changedAt: timestamp("changedAt").defaultNow().notNull(),
+});
+
+export type FAQVersion = typeof faqVersions.$inferSelect;
+export type InsertFAQVersion = typeof faqVersions.$inferInsert;
+
+/**
+ * FAQ images table for managing images used in FAQs.
+ */
+export const faqImages = mysqlTable("faq_images", {
+  id: int("id").autoincrement().primaryKey(),
+  faqId: int("faqId").notNull(),
+  
+  // Image info
+  imageUrl: varchar("imageUrl", { length: 500 }).notNull(),
+  imageKey: varchar("imageKey", { length: 255 }).notNull(),
+  altText: varchar("altText", { length: 255 }),
+  caption: varchar("caption", { length: 500 }),
+  
+  // Display order
+  displayOrder: int("displayOrder").default(0),
+  
+  // Audit
+  uploadedBy: int("uploadedBy").notNull(),
+  uploadedAt: timestamp("uploadedAt").defaultNow().notNull(),
+});
+
+export type FAQImage = typeof faqImages.$inferSelect;
+export type InsertFAQImage = typeof faqImages.$inferInsert;

@@ -25,6 +25,7 @@ import {
 } from "./notifications";
 import { z } from "zod";
 import { analyticsRouter } from "./routers/analytics";
+import { faqRouter } from "./routers/faq";
 
 export const appRouter = router({
   system: systemRouter,
@@ -286,6 +287,7 @@ export const appRouter = router({
   }),
 
   analytics: analyticsRouter,
+  faq: faqRouter,
 });
 
 export type AppRouter = typeof appRouter;
