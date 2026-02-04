@@ -280,20 +280,37 @@ export const faqRouter = router({
           order: input.order,
         });
 
+        const itemsWithImages = await Promise.all(
+          items.map(async (faq) => {
+            const images = await getFAQImages(faq.id);
+            return {
+              id: faq.id,
+              slug: faq.slug,
+              status: faq.status,
+              productType: faq.productType,
+              scenario: faq.scenario,
+              questions: JSON.parse(faq.questions),
+              answers: JSON.parse(faq.answers),
+              seoTitle: faq.seoTitle,
+              seoDescription: faq.seoDescription,
+              tags: faq.tags ? JSON.parse(faq.tags) : [],
+              version: faq.version,
+              publishedAt: faq.publishedAt,
+              createdAt: faq.createdAt,
+              updatedAt: faq.updatedAt,
+              images: images.map((img) => ({
+                id: img.id,
+                imageUrl: img.imageUrl,
+                altText: img.altText,
+                caption: img.caption,
+                displayOrder: img.displayOrder,
+              })),
+            };
+          })
+        );
+
         return {
-          items: items.map((faq) => ({
-            id: faq.id,
-            slug: faq.slug,
-            status: faq.status,
-            productType: faq.productType,
-            scenario: faq.scenario,
-            questions: JSON.parse(faq.questions),
-            seoTitle: faq.seoTitle,
-            version: faq.version,
-            publishedAt: faq.publishedAt,
-            createdAt: faq.createdAt,
-            updatedAt: faq.updatedAt,
-          })),
+          items: itemsWithImages,
           total,
           page: input.page,
           limit: input.limit,
