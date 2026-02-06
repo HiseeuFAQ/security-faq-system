@@ -15,6 +15,8 @@ import HiseeuAdmin from "./pages/HiseeuAdmin";
 import HiseeuAdminV2 from "./pages/HiseeuAdminV2";
 import FAQHome from "./pages/FAQHome";
 import FAQManagement from "./pages/FAQManagement";
+import FAQHomeLorex from "./pages/FAQHomeLorex";
+import ProductSeriesPage from "./pages/ProductSeriesPage";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -24,7 +26,9 @@ function Router() {
       <Route path={"/hiseeu-v1"} component={HiseeuHome} />
       <Route path={"/hiseeu/admin"} component={HiseeuAdminV2} />
       <Route path={"/hiseeu/admin-v1"} component={HiseeuAdmin} />
-      <Route path={"/faq"} component={FAQHome} />
+      <Route path={"/faq"} component={FAQHomeLorex} />
+      <Route path={"/faq-old"} component={FAQHome} />
+      <Route path={"/products/:seriesId"} component={ProductSeriesPage} />
       <Route path={"/admin/faq/:id"} component={FAQManagement} />
       <Route path={"/admin/faq"} component={FAQManagement} />
       <Route path={"/"} component={Home} />
